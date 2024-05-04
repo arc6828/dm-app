@@ -129,6 +129,9 @@ Header START -->
                             <a class="nav-link" href="{{ url('/about') }}">About</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/knowledge') }}">Knowledge</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                         </li>
 

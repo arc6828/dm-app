@@ -41,6 +41,11 @@ Route::get('/about', function(){
 Route::get('/contact', function(){
     return view("contact");
 });
+Route::get('/knowledge', function(){
+    $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
+                   
+    return view('knowledge', compact("posts"));
+});
 
 Route::get('/post/{slug}', function($slug){
     $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
