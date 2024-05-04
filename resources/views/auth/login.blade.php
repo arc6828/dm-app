@@ -8,21 +8,22 @@
                     <div class="p-4 p-sm-5 bg-primary bg-opacity-10 rounded">
                         <h2>Log in to your account</h2>
                         <!-- Form START -->
-                        <form class="mt-4">
+                        <form class="mt-4" method="POST" action="{{ route('login') }}">
+                            @csrf
+                            
                             <!-- Email -->
                             <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required>
                             </div>
                             <!-- Password -->
                             <div class="mb-3">
                                 <label class="form-label" for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="*********">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="*********" required>
                             </div>
                             <!-- Checkbox -->
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" class="form-check-input" id="remember" name="remember">
                                 <label class="form-check-label" for="exampleCheck1">keep me signed in</label>
                             </div>
                             <!-- Button -->
@@ -31,7 +32,7 @@
                                     <button type="submit" class="btn btn-success">Sign me in</button>
                                 </div>
                                 <div class="col-sm-8 text-sm-end">
-                                    <span>Don't have an account? <a href="signup.html"><u>Sign up</u></a></span>
+                                    <span>Don't have an account? <a href="{{ route('register') }}"><u>Sign up</u></a></span>
                                 </div>
                             </div>
                         </form>
