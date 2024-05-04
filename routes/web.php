@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home-blog-classic');
+    $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
+                   
+    return view('home-blog-classic', compact("posts"));
     // return view('home');
     // return view('welcome');
 });
@@ -35,6 +37,9 @@ require __DIR__.'/auth.php';
 
 Route::get('/about', function(){
     return view("about");
+});
+Route::get('/contact', function(){
+    return view("contact");
 });
 
 Route::get('/post/{slug}', function($slug){
