@@ -99,9 +99,9 @@ Header START -->
                 <!-- Logo START -->
                 <a class="navbar-brand" href="https://blogzine.webestica.com/index.html">
                     <img class="navbar-brand-item light-mode-item"
-                        src="blogzine/logo.svg" alt="logo">
+                        src="{{ asset('blogzine/logo.svg') }}" alt="logo">
                     <img class="navbar-brand-item dark-mode-item"
-                        src="blogzine/logo-light.svg" alt="logo">
+                        src="{{ asset('blogzine/logo-light.svg') }}" alt="logo">
                 </a>
                 <!-- Logo END -->
 
@@ -357,7 +357,7 @@ Header START -->
                                             <div class="card bg-transparent">
                                                 <!-- Card img -->
                                                 <img class="card-img rounded"
-                                                    src="blogzine/01.jpg"
+                                                    src="{{ asset('blogzine/01.jpg') }}"
                                                     alt="Card image">
                                                 <div class="card-body px-0 pt-3">
                                                     <h6 class="card-title mb-0"><a
@@ -382,7 +382,7 @@ Header START -->
                                             <div class="card bg-transparent">
                                                 <!-- Card img -->
                                                 <img class="card-img rounded"
-                                                    src="blogzine/02.jpg"
+                                                    src="{{ asset('blogzine/02.jpg') }}"
                                                     alt="Card image">
                                                 <div class="card-body px-0 pt-3">
                                                     <h6 class="card-title mb-0"><a
@@ -407,7 +407,7 @@ Header START -->
                                             <div class="card bg-transparent">
                                                 <!-- Card img -->
                                                 <img class="card-img rounded"
-                                                    src="blogzine/03.jpg"
+                                                    src="{{ asset('blogzine/03.jpg') }}"
                                                     alt="Card image">
                                                 <div class="card-body px-0 pt-3">
                                                     <h6 class="card-title mb-0"><a
@@ -610,10 +610,10 @@ Header END -->
             <div class="row pt-5">
                 <!-- Footer Widget -->
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <img class="light-mode-item" src="blogzine/logo.svg"
+                    <img class="light-mode-item" src="{{ asset('blogzine/logo.svg') }}"
                         alt="logo">
                     <img class="dark-mode-item"
-                        src="blogzine/logo-light.svg" alt="logo">
+                        src="{{ asset('blogzine/logo-light.svg') }}" alt="logo">
                     <p class="mt-3">The next-generation blog, news, and magazine theme for you to start sharing your
                         stories today! This Bootstrap 5 based theme is ideal for all types of sites that deliver the
                         news.</p>

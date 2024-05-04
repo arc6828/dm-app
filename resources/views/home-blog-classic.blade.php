@@ -83,6 +83,7 @@
                         $articles = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"));
                     @endphp
                     @foreach($articles->channel->item as $index => $item)
+                        
                     <!-- Card item START -->
                     <div class="card border rounded-3 up-hover p-4 mb-4">
                         <div class="row g-3">
@@ -96,9 +97,14 @@
                                 <a href="https://blogzine.webestica.com/index-5.html#" class="badge text-bg-danger mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>Marketing</a>
                                 <a href="https://blogzine.webestica.com/index-5.html#" class="badge bg-dark mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>Startups</a>
                                 <!-- Title -->
+                                @php
+                                    $parts = explode("/",$item->guid);
+                                    $slug = end($parts);
+                                @endphp
+                                
                                 <h2 class="card-title">
                                     <!-- <a href="https://blogzine.webestica.com/post-single-6.html" class="btn-link text-reset stretched-link">7 common mistakes everyone makes while traveling</a> -->
-                                    <a target="_blank" href="{{ $item->link }}" class="btn-link text-reset stretched-link">{{$item->title}}</a>
+                                    <a href="{{ url('post/'.$slug) }}" class="btn-link text-reset stretched-link">{{$item->title}}</a>
                                 </h2>
                                 <!-- Author info -->
                                 <div class="d-flex align-items-center position-relative mt-3">

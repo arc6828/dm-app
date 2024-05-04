@@ -36,3 +36,18 @@ require __DIR__.'/auth.php';
 Route::get('/about', function(){
     return view("about");
 });
+
+Route::get('/post/{slug}', function($slug){
+    $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
+    // "guid": "https://medium.com/p/8156e4fe87f0",
+
+    $posts = array_filter($posts, function($item) use ($slug){
+        $parts = explode("/",$item->guid);
+        $s = end($parts);
+        return ($s == $slug);
+    });
+    $post = end($posts);
+
+
+    return view("post", compact("post"));
+});
