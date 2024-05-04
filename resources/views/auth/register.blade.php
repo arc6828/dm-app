@@ -8,25 +8,29 @@
                     <div class="bg-primary bg-opacity-10 rounded p-4 p-sm-5">
                         <h2>Create your free account </h2>
                         <!-- Form START -->
-                        <form class="mt-4">
+                        <form class="mt-4"method="POST" action="{{ route('register') }}">
+                            @csrf
+                            <!-- Name -->
+                            <div class="mb-3">
+                                <label class="form-label" for="exampleInputEmail1">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="name" required>                                
+                            </div>
                             <!-- Email -->
                             <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="E-mail">
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="E-mail" required>
                                 <small id="emailHelp" class="form-text">We'll never share your email with anyone
                                     else.</small>
                             </div>
                             <!-- Password -->
                             <div class="mb-3">
                                 <label class="form-label" for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="*********">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="*********" required>
                             </div>
                             <!-- Password -->
                             <div class="mb-3">
                                 <label class="form-label" for="exampleInputPassword2">Confirm Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
                                     placeholder="*********">
                             </div>
                             <!-- Checkbox -->
