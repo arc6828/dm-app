@@ -74,7 +74,7 @@
                                 </div>
                                 <!-- Detail -->
                                 <div class="col-md-6 col-lg-4">
-                                    <p>{{ mb_substr($item->first_paragraph, 0, 140) }}</p>
+                                    <p>{{ mb_substr($item->first_paragraph, 0, 256) }}</p>
                                 </div>
                                 <!-- Image -->
                                 <div class="col-md-6 col-lg-3">
