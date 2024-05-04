@@ -83,6 +83,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('blogzine/tiny-slider.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="https://blogzine.webestica.com/assets/vendor/apexcharts/css/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="https://blogzine.webestica.com/assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
+
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('blogzine/style.css') }}">
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> --}}
@@ -586,6 +589,9 @@ Header END -->
 
     <!-- Vendors -->
     <script src="{{ asset('blogzine/tiny-slider.js') }}"></script>
+    <!-- Vendors -->
+    <script src="https://blogzine.webestica.com/assets/vendor/apexcharts/js/apexcharts.min.js"></script>
+    <script src="https://blogzine.webestica.com/assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js"></script>
 
     <!-- Template Functions -->
     <script src="{{ asset('blogzine/functions.js') }}"></script>

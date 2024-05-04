@@ -112,7 +112,7 @@
                                 <!-- Blog item -->
                                 <div class="col-12">
                                     <div class="d-flex align-items-center position-relative">
-                                        <img class="w-60 rounded" src="assets/images/blog/1by1/01.jpg" alt="product">
+                                        <img class="w-60 rounded" src="blogzine/01.jpg" alt="product">
                                         <div class="ms-3">
                                             <a href="#" class="h6 stretched-link">Dirty little secrets about the
                                                 business industry</a>
@@ -127,7 +127,7 @@
                                 <!-- Blog item -->
                                 <div class="col-12">
                                     <div class="d-flex align-items-center position-relative">
-                                        <img class="w-60 rounded" src="assets/images/blog/1by1/02.jpg" alt="product">
+                                        <img class="w-60 rounded" src="blogzine/02.jpg" alt="product">
                                         <div class="ms-3">
                                             <a href="#" class="h6 stretched-link">12 worst types of business
                                                 accounts you follow on Twitter</a>
@@ -142,7 +142,7 @@
                                 <!-- Blog item -->
                                 <div class="col-12">
                                     <div class="d-flex align-items-center position-relative">
-                                        <img class="w-60 rounded" src="assets/images/blog/1by1/03.jpg" alt="product">
+                                        <img class="w-60 rounded" src="blogzine/03.jpg" alt="product">
                                         <div class="ms-3">
                                             <a href="#" class="h6 stretched-link">Bad habits that people in the
                                                 industry need to quit</a>
