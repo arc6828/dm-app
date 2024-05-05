@@ -142,7 +142,7 @@ Header START -->
                         @if (Route::has('login'))
                             @auth
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://blogzine.webestica.com/dashboard.html">Dashboard</a>
+                                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
                             @else
                                 <li class="nav-item">
