@@ -42,6 +42,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @break
                             @endforeach
                         </div>
                     </div>
@@ -57,7 +58,9 @@
             <div class="row">
                 <div class="col-12">
                     @foreach($posts as $index => $item)
-                        
+                    @if($loop->first)
+                        @continue
+                    @endif
                     <!-- Card item START -->
                     <div class="card border rounded-3 up-hover p-4 mb-4">
                         <div class="row g-3">
