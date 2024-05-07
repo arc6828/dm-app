@@ -4,11 +4,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Blogzine - Blog and Magazine Bootstrap 5 Theme</title>
+    <title>DMApplication - App and Medical Content for Diabetes</title>
     <!-- Meta Tags -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Webestica.com">
+    <meta name="author" content="dmapplication.com">
     <meta name="description" content="Bootstrap based News, Magazine and Blog Theme">
 
     <!-- Dark mode -->
@@ -71,7 +71,7 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://blogzine.webestica.com/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('img/dm.png') }}">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -83,28 +83,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('blogzine/tiny-slider.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="https://blogzine.webestica.com/assets/vendor/apexcharts/css/apexcharts.css">
-	<link rel="stylesheet" type="text/css" href="https://blogzine.webestica.com/assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://blogzine.webestica.com/assets/vendor/apexcharts/css/apexcharts.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://blogzine.webestica.com/assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('blogzine/style.css') }}">
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> --}}
-
+    <style>
+        .navbar-brand .navbar-brand-item {
+            height: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- =======================
-Header START -->
+    <!-- =======================Header START -->
     <header class="navbar-light navbar-sticky header-static">
         <!-- Logo Nav START -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <!-- Logo START -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="navbar-brand-item light-mode-item" src="{{ asset('blogzine/logo.svg') }}"
+                    <img class="navbar-brand-item light-mode-item" src="{{ asset('img/dmapplication.png') }}"
                         alt="logo">
-                    <img class="navbar-brand-item dark-mode-item" src="{{ asset('blogzine/logo-light.svg') }}"
+                    <img class="navbar-brand-item dark-mode-item" src="{{ asset('img/dmapplication.png') }}"
                         alt="logo">
                 </a>
                 <!-- Logo END -->
@@ -407,9 +412,10 @@ Header START -->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
 
-                                        
-                                        
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+
+
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); this.closest('form').submit();">
                                             <i class="bi bi-power fa-fw me-2"></i>Sign Out
                                         </a>
                                     </form>
@@ -485,13 +491,13 @@ Header END -->
             <div class="row pt-5">
                 <!-- Footer Widget -->
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <img class="light-mode-item" src="{{ asset('blogzine/logo.svg') }}" alt="logo">
-                    <img class="dark-mode-item" src="{{ asset('blogzine/logo-light.svg') }}" alt="logo">
+                    <img class="light-mode-item" src="{{ asset('img/dmapplication.png') }}" alt="logo">
+                    <img class="dark-mode-item" src="{{ asset('img/dmapplication.png') }}" alt="logo">
                     <p class="mt-3">The next-generation blog, news, and magazine theme for you to start sharing your
                         stories today! This Bootstrap 5 based theme is ideal for all types of sites that deliver the
                         news.</p>
-                    <div class="mt-4">©2023 <a href="https://www.webestica.com/" class="text-reset btn-link"
-                            target="_blank">Webestica</a>. All rights reserved
+                    <div class="mt-4">©2023 <a href="https://www.dmapplication.com" class="text-reset btn-link"
+                            target="_blank">DMApplication</a>. All rights reserved
                     </div>
                 </div>
 
