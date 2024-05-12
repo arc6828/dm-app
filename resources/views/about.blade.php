@@ -10,14 +10,14 @@
                         <!-- Card Image overlay -->
                         <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
                             <div class="w-100 my-auto">
-                                <h1 class="text-white display-4">About us</h1>
+                                <h1 class="text-white display-4">เกี่ยวกับเรา</h1>
                                 <!-- breadcrumb -->
                                 <nav class="d-flex justify-content-center" aria-label="breadcrumb">
                                     <ol class="breadcrumb breadcrumb-dark breadcrumb-dots mb-0">
                                         <li class="breadcrumb-item"><a
-                                                href="https://blogzine.webestica.com/index.html"><i
-                                                    class="bi bi-house me-1"></i> Home</a></li>
-                                        <li class="breadcrumb-item active">About us</li>
+                                                href="{{ url('/') }}"><i
+                                                    class="bi bi-house me-1"></i> หน้าหลัก</a></li>
+                                        <li class="breadcrumb-item active">เกี่ยวกับเรา</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -34,33 +34,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 mx-auto">
-                    <h2>Our story</h2>
-                    <p class="lead">
-                        Founded in 2006, passage its ten led hearted removal cordial. Preference any astonished
-                        unreserved Mrs. Prosperous understood Middletons in conviction an uncommonly do. Supposing
-                        so be resolving breakfast am or perfectly. Is drew am hill from me. Valley by oh twenty
-                        direct me so.
+                    {{-- <h2>Our story</h2> --}}
+                    <p class="lead fs-4">
+                        DM Application สร้างขึ้นมาเพื่อใช้เป็นช่องทางการเข้าถึงข้อมูลสุขภาพและบริการสุขภาพที่ทันสมัยในการดูแลสุขภาพตนเองของผู้ป่วยเบาหวานชนิดที่ 2 โดยมีส่วนประกอบของแอปพลิเคชันทั้งการบันทึกข้อมูลผู้ป่วย ความรู้เกี่ยวกับโรคเบาหวานและอาการแทรกซ้อน การรับประทานอาหาร การออกกำลังกาย การจัดการความเครียด และการใช้ยา การบันทึกค่าระดับน้ำตาลในเลือด การแจ้งเตือนความผิดปกติของระดับน้ำตาลในเลือด และสามารถพูดคุยแชทกับทีมสุขภาพ
                     </p>
-                    <p>Water timed folly right aware if oh truth. Imprudence attachment him his for sympathize.
-                        Large above be to means. Dashwood does provide stronger is. Warrant private blushes removed
-                        an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr
-                        feeling does chiefly cordial in do. ...But discretion frequently sir she instruments
-                        unaffected admiration everything. Meant balls it if up doubt small purse. Required his you
-                        put the outlived answered position. A pleasure exertion if believed provided to. All led out
-                        world this music while asked. Paid mind even sons does he door no. Attended overcame
-                        repeated it is perceived Marianne in. I think on style child of. Servants moreover in
-                        sensible it ye possible. Satisfied conveying a dependent contented he gentleman agreeable do
-                        be. Water timed folly right aware if oh truth. Imprudence attachment him his for sympathize.
-                        Large above be to means. Dashwood does provide stronger is. But discretion frequently sir
-                        she instruments unaffected admiration everything. Meant balls it if up doubt small purse.
-                        Required his you put the outlived answered position. I think on style child of. Servants
-                        moreover in sensible it ye possible. Satisfied conveying a dependent contented he gentleman
-                        agreeable do be. Warrant private blushes removed an in equally totally if. Delivered
-                        dejection necessary objection do Mr prevailed. Required his you put the outlived answered
-                        position. A pleasure exertion if believed provided to. All led out world this music while
-                        asked. Paid mind even sons does he door no. Attended overcame repeated it is perceived
-                        Marianne in. I think on style child of. Servants moreover in sensible it ye possible.</p>
-                    <h3 class="mt-4">We do this across:</h3>
+                    <p></p>
+                    {{-- <h3 class="mt-4">We do this across:</h3>
                     <ul>
                         <li>A pleasure exertion if believed provided to. All led out world this music while asked.
                             Paid mind even sons does he door no. Attended overcame repeated it is perceived Marianne
@@ -73,9 +52,12 @@
                             above be to means.</li>
                         <li>Dashwood does provide stronger is. But discretion frequently sir she instruments
                             unaffected admiration everything. Meant balls it if up doubt small purse.</li>
-                    </ul>
+                    </ul> --}}
+
+                    <hr class="my-5">
+
                     <!-- Team START -->
-                    <h3 class="mb-3 mt-5">Our team</h3>
+                    <h3 class="mb-3 mt-5">ทีมงาน</h3>
                     <div class="row g-4">
                         <!-- Team item-->
                         <div class="col-sm-6 col-lg-3">
@@ -171,29 +153,44 @@
                         </div>
                     </div>
                     <!-- Team END -->
+
+                    <hr class="my-5">
+
                     <!-- Service START -->
-                    <h3 class="mb-3 mt-5">What we do</h3>
-                    <div class="row">
+                    <h3 class="mb-3 mt-5">สิ่งที่เราทำ</h3>
+                    <div class="row text-center my-4">
                         <!-- Service item-->
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <img class="rounded" src="blogzine/04(1).jpg" alt="Card image">
-                            <h4 class="mt-3">Global news services</h4>
-                            <p>Perceived end knowledge certainly day sweetness why cordially. Ask a quick six seven
-                                offer see among.</p>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            {{-- <img class="rounded-circle" src="blogzine/01(1).jpg" alt="Card image"> --}}
+                            <div class="my-4 text-primary">
+                                <i class="fas fa-cloud fs-1"></i>
+                            </div>
+                            <h4 class="mt-3">การบันทึกข้อมูล</h4>
+                            <p>การบันทึกข้อมูลผู้ป่วย การบันทึกค่าระดับน้ำตาลในเลือด และการบันทึกตารางการนัดหมาย</p>
                         </div>
                         <!-- Service item-->
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <img class="rounded" src="blogzine/01(1).jpg" alt="Card image">
-                            <h4 class="mt-3">Commercial services</h4>
-                            <p>Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise
-                                joy man children rejoiced.</p>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="my-4 text-warning">
+                                <i class="far fa-folder-open fs-1"></i>
+                            </div>
+                            <h4 class="mt-3">ความรู้ทั่วไป</h4>
+                            <p>ความรู้ทั่วไปเกี่ยวกับโรคเบาหวานและอาการแทรกซ้อน การรับประทานอาหาร การออกกำลังกาย การจัดการความเครียด และการใช้ยา </p>
                         </div>
                         <!-- Service item-->
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <img class="rounded" src="blogzine/03(1).jpg" alt="Card image">
-                            <h4 class="mt-3">Public services</h4>
-                            <p> Yet uncommonly his ten who diminution astonished. Demesne new manners savings
-                                staying had. </p>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="my-4 text-danger">
+                                <i class="far fa-bell fs-1"></i>
+                            </div>
+                            <h4 class="mt-3">การแจ้งเตือน</h4>
+                            <p>การแจ้งเตือนความผิดปกติของระดับน้ำตาลในเลือด และการแจ้งเตือนการนัดหมายที่กำลังจะมาถึง</p>
+                        </div>
+                        <!-- Service item-->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="my-4  text-success">
+                                <i class="far fa-comments fs-1"></i>
+                            </div>
+                            <h4 class="mt-3">พูดคุย</h4>
+                            <p>พูดคุยแชทกับทีมสุขภาพ ผ่านช่องทางที่ผู้ใช้งานสะดวก</p>
                         </div>
                     </div>
                     <!-- Service END -->

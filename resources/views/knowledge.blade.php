@@ -5,12 +5,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="bg-primary bg-opacity-10 p-4 p-md-5 rounded-3 text-center">
-                        <h1 class="text-primary">Knowledge</h1>
+                        <h1 class="text-primary">คลังความรู้</h1>
                         <nav class="d-flex justify-content-center" aria-label="breadcrumb">
                             <ol class="breadcrumb breadcrumb-dots m-0">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house me-1"></i>
-                                        Home</a></li>
-                                <li class="breadcrumb-item active">All posts</li>
+                                <li class="breadcrumb-item"><a href="index.html">
+                                    <i class="bi bi-house me-1"></i> หน้าหลัก</a></li>
+                                <li class="breadcrumb-item active">โพสต์ทั้งหมด</li>
                             </ol>
                         </nav>
                     </div>

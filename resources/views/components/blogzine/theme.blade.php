@@ -91,9 +91,36 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('blogzine/style.css') }}">
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
     <style>
         .navbar-brand .navbar-brand-item {
             height: 50px;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        nav,
+        .nav,
+        .menu,
+        button,
+        .button,
+        .btn,
+        .price,
+        .prompt,
+        ._heading,
+        .wp-block-pullquote blockquote,
+        blockquote,
+        label,
+        legend,
+        a,
+        .card-header,
+        th,
+        li {
+            font-family: "Prompt", "Open Sans script=all rev=1" !important;
+            font-weight: 500 !important;
         }
     </style>
 </head>
@@ -118,7 +145,7 @@
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="text-body h6 d-none d-sm-inline-block">Menu</span>
+                    <span class="text-body h6 d-none d-sm-inline-block">เมนู</span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -128,16 +155,16 @@
 
                         <!-- Nav item 1 Demos -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Home</a>
+                            <a class="nav-link" href="{{ url('/') }}">หน้าหลัก</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/about') }}">About</a>
+                            <a class="nav-link" href="{{ url('/about') }}">เกี่ยวกับเรา</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/knowledge') }}">Knowledge</a>
+                            <a class="nav-link" href="{{ url('/knowledge') }}">คลังความรู้</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
+                            <a class="nav-link" href="{{ url('/contact') }}">ติดต่อเรา</a>
                         </li>
 
 
@@ -147,15 +174,15 @@
                         @if (Route::has('login'))
                             @auth
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                                    <a class="nav-link" href="{{ route('dashboard') }}">แดชบอร์ด</a>
                                 </li>
                             @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    <a class="nav-link" href="{{ route('login') }}">เข้าสู่ระบบ</a>
                                 </li>
                                 @if (Route::has('register'))
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                        <a class="nav-link" href="{{ route('register') }}">ลงทะเบียน</a>
                                     </li>
                                 @endif
                             @endauth
@@ -496,7 +523,7 @@ Header END -->
                     <p class="mt-3">The next-generation blog, news, and magazine theme for you to start sharing your
                         stories today! This Bootstrap 5 based theme is ideal for all types of sites that deliver the
                         news.</p>
-                    <div class="mt-4">©2023 <a href="https://www.dmapplication.com" class="text-reset btn-link"
+                    <div class="mt-4">©{{ date("Y") }} <a href="https://www.dmapplication.com" class="text-reset btn-link"
                             target="_blank">DMApplication</a>. All rights reserved
                     </div>
                 </div>
