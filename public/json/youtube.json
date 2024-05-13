@@ -1,0 +1,246 @@
+{
+    "kind": "youtube#playlistItemListResponse",
+    "etag": "OMNTkh3Dnf-5wvB6gg76O_U3h5A",
+    "nextPageToken": "EAAajgFQVDpDQVVpRURFeVJVWkNNMEl4UXpVM1JFVTBSVEVvQVVpWjVPUDZpNHFHQTFBQldrVWlRMmxLVVZSSVdtOWxhemcwV1Zoa2VsVlZaRk5rTTFaWVlsZFJkR1JYVmxoV01VSmFaRlJrUmsxWFpGUmliWFF5UldkM1NYTjJMVWR6WjFsUmNWQjJjekpCVFNJ",
+    "items": [
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "TSNgBDMLPJx_90xRwWImVta4U68",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi41NkI0NEY2RDEwNTU3Q0M2",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:20:17Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "หมอสันต์ - EP.5 รักษาโรคเบาหวานด้วยตัวเอง",
+                "description": "Follow website: https://www.wellnesswecare.com/\nFollow Line ID: https://goo.gl/tVBKJH \nFollow Fanpage: https://www.facebook.com/Wellnesswecare/\nFollow Instagram: https://goo.gl/gZhjAh",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/gZelZjRqfjs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/gZelZjRqfjs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/gZelZjRqfjs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/gZelZjRqfjs/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/gZelZjRqfjs/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 0,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "gZelZjRqfjs"
+                },
+                "videoOwnerChannelTitle": "WELLNESS WE CARE",
+                "videoOwnerChannelId": "UCM3XjjrZXGlFghEUwcm7fUQ"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "cE7GBgllD3h8y5ZmSKh1xqxRxwg",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi4yODlGNEE0NkRGMEEzMEQy",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:20:48Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "เกร็ดความรู้คู่สุขภาพ | โรคเบาหวาน",
+                "description": "โรคเบาหวานสามารถเกิดขึ้นได้กับทุกคน ทุกเพศ ทุกวัย และเมื่อป่วยเป็นโรคเบาหวานแล้วไม่สามารถรักษาให้หายขาดได้แต่จำเป็นต้องควบคุมดูแลรักษาอย่างถูกต้องเหมาะสมร่วมกับการควบคุมอาหาร การใช้ยา และการออกกำลังกาย เพื่อควบคุมปริมาณของน้ำตาลและไขมันในเส้นเลือดไม่ให้สูงเกินไป",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/wuqiyOnvXSg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/wuqiyOnvXSg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/wuqiyOnvXSg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/wuqiyOnvXSg/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/wuqiyOnvXSg/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 1,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "wuqiyOnvXSg"
+                },
+                "videoOwnerChannelTitle": "ติดจอ ฬ.จุฬา",
+                "videoOwnerChannelId": "UCKiaAK0PCnsFJZTnnL0kUwQ"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "vJrBHGnZmLZ8I3e9IOQyM4BMSXw",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi4wMTcyMDhGQUE4NTIzM0Y5",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:21:01Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "โภชนาการกับโรคเบาหวาน",
+                "description": "โภชนาการกับโรคเบาหวาน\nโดย นักโภชนาการ โรงพยาบาลลาดพร้าว",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/UmgceFkK6s8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/UmgceFkK6s8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/UmgceFkK6s8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/UmgceFkK6s8/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/UmgceFkK6s8/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 2,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "UmgceFkK6s8"
+                },
+                "videoOwnerChannelTitle": "โรงพยาบาลลาดพร้าว Ladprao Hospital",
+                "videoOwnerChannelId": "UCUrJ8uXQ879IWFQz0l-dFdQ"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "ImnXFzdl-61qOcH7kpfs8QXFdKI",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi41MjE1MkI0OTQ2QzJGNzNG",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:21:19Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "ตอนที่ 4 รู้เรื่องยารักษาเบาหวาน",
+                "description": "แบบประเมินความพึงพอใจ: https://forms.gle/YBgcHkpeGe46d6i27\n\n#เบาหวาน #ยาเบาหวาน #ลดน้ำตาลในเลือด",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/o4cm4EvDE78/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/o4cm4EvDE78/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/o4cm4EvDE78/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/o4cm4EvDE78/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/o4cm4EvDE78/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 3,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "o4cm4EvDE78"
+                },
+                "videoOwnerChannelTitle": "กองโรคไม่ติดต่อ กรมควบคุมโรค",
+                "videoOwnerChannelId": "UCNo82psf1f5012j9OWzk90g"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "UgKiEo1LzGeQ2p0MPtawlOql0b0",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi4wOTA3OTZBNzVEMTUzOTMy",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:21:35Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "ตอนที่ 3.1 เคล็ดลับขจัดความเครียด เคลียร์ความกังวล",
+                "description": "แบบประเมินความพึงพอใจ: https://forms.gle/4F1zxK1UpSmT7RLs5\n\n#เบาหวาน #ความดันโลหิตสูง #ความเครียด",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/dyHZmApaf6E/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/dyHZmApaf6E/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/dyHZmApaf6E/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/dyHZmApaf6E/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/dyHZmApaf6E/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 4,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "dyHZmApaf6E"
+                },
+                "videoOwnerChannelTitle": "กองโรคไม่ติดต่อ กรมควบคุมโรค",
+                "videoOwnerChannelId": "UCNo82psf1f5012j9OWzk90g"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 7,
+        "resultsPerPage": 5
+    }
+}
