@@ -53,18 +53,24 @@ Route::get('/knowledge', function(){
 });
 
 Route::get('/post/{slug}', function($slug){
-    $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
+    $all_posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
     // "guid": "https://medium.com/p/8156e4fe87f0",
 
-    $posts = array_filter($posts, function($item) use ($slug){
+    $posts = array_filter($all_posts, function($item) use ($slug){
         $parts = explode("/",$item->guid);
         $s = end($parts);
         return ($s == $slug);
     });
     $post = end($posts);
 
+    // relates
+    $relates = array_filter($all_posts, function($item) use ($slug){
+        $parts = explode("/",$item->guid);
+        $s = end($parts);
+        return ($s != $slug);
+    });
 
-    return view("post", compact("post"));
+    return view("post", compact("post","relates"));
 });
 
 Route::get('/watch', function(){
@@ -74,13 +80,18 @@ Route::get('/watch', function(){
 });
 
 Route::get('/watch/{slug}', function($slug){
-    $posts = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
+    $all_posts = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
     // "guid": "https://medium.com/p/8156e4fe87f0",
 
-    $posts = array_filter($posts, function($item) use ($slug){
+    $posts = array_filter($all_posts, function($item) use ($slug){
         return ($item->id == $slug);
     });
     $post = end($posts);
 
-    return view("post-watch", compact("post"));
+    //relates
+    $relates = array_filter($all_posts, function($item) use ($slug){
+        return ($item->id != $slug);
+    });
+
+    return view("post-watch", compact("post","relates"));
 });

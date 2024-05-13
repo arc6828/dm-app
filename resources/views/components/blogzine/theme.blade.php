@@ -426,17 +426,15 @@
                                 </li>
                                 <!-- Links -->
                                 <li>
-                                    <a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit
-                                        Profile</a>
+                                    <a class="dropdown-item" href="{{ url('profile') }}"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account
-                                        Settings</a>
-                                </li>
-                                <li>
+                                {{-- <li>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
+                                </li> --}}
+                                {{-- <li>
                                     <a class="dropdown-item" href="#"><i
                                             class="bi bi-info-circle fa-fw me-2"></i>Help</a>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">

@@ -5,8 +5,13 @@
             <div class="row">
                 <!-- Main Content START -->
                 <div class="col-lg-8 mb-5">
-                    <a href="https://blogzine.webestica.com/post-single-6.html#" class="badge bg-danger bg-opacity-10 text-danger mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>Video</a>
-                    <span class="ms-2 small">Updated: 15 April 2022 07:30 IST</span>
+                    <a href="#" class="badge bg-primary bg-opacity-10 text-primary mb-2 me-2">
+                        <i class="fas fa-circle me-2 small fw-bold"></i>Diabetes
+                    </a>
+                    <a href="#" class="badge bg-secondary bg-opacity-10 text-secondary mb-2 me-2">
+                        <i class="fas fa-circle me-2 small fw-bold"></i>Health
+                    </a>
+                    <span class="ms-2 small">Updated: {{ $post->pubDate }}</span>
                     <h1 class="display-5">{{ $post->title }}</h1>
 
                     <div class="ratio ratio-16x9 overflow-hidden rounded my-4 d-none">
@@ -40,36 +45,24 @@
                                 </div>
                             </div>
                             <!-- <p>Louis Ferguson is a senior editor for the blogzine and also reports on breaking news based in London. He has written about government, criminal justice, and the role of money in politics since 2015. </p> -->
-                            <a href="https://blogzine.webestica.com/post-single-6.html#" class="btn btn-danger-soft btn-sm ">View articles</a>
+                            {{-- <a href="https://blogzine.webestica.com/post-single-6.html#" class="btn btn-danger-soft btn-sm ">View articles</a> --}}
                         </div>
 
                         <!-- Most read -->
                         <div>
-                            <h5 class="mt-5 mb-3">Most read</h5>
+                            <h5 class="mt-5 mb-3">บทความที่เกี่ยวข้อง</h5>
+
+                            @foreach ($relates as $index => $item)
+                            @php
+                                $parts = explode('/', $item->guid);
+                                $slug = end($parts);
+                            @endphp
                             <div class="d-flex position-relative mb-3">
-                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">01</span>
-                                <h6><a href="https://blogzine.webestica.com/post-single-6.html#" class="stretched-link">Bad habits that people in the business industry need to quit</a></h6>
+                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">0{{ $index +1 }}</span>
+                                <h6><a href="{{ url('post/' . $slug) }}" class="stretched-link">{{ $item->title }}</a></h6>
                             </div>
-                            <div class="d-flex position-relative mb-3">
-                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">03</span>
-                                <h6><a href="https://blogzine.webestica.com/post-single-6.html#" class="stretched-link">How 10 worst business fails of all time could have been prevented</a></h6>
-                            </div>
-                            <div class="d-flex position-relative mb-3">
-                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">04</span>
-                                <h6><a href="https://blogzine.webestica.com/post-single-6.html#" class="stretched-link">10 facts about business that will instantly put you in a good mood</a></h6>
-                            </div>
-                            <div class="d-flex position-relative mb-3">
-                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">05</span>
-                                <h6><a href="https://blogzine.webestica.com/post-single-6.html#" class="stretched-link">How did we get here? The history of the business told through tweets</a></h6>
-                            </div>
-                            <div class="d-flex position-relative mb-3">
-                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">06</span>
-                                <h6><a href="https://blogzine.webestica.com/post-single-6.html#" class="stretched-link">Ten tips about startups that you can't learn from books</a></h6>
-                            </div>
-                            <div class="d-flex position-relative mb-3">
-                                <span class="me-3 fa-fw fw-bold fs-3 opacity-5">07</span>
-                                <h6><a href="https://blogzine.webestica.com/post-single-6.html#" class="stretched-link">How to worst business fails of all time could have been prevented</a></h6>
-                            </div>
+                            @endforeach
+                            
                         </div>
                     </div>
                 </div>

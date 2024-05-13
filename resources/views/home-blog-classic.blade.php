@@ -111,7 +111,7 @@
                     @endforeach
                     
                     <!-- Load more -->
-                    <button type="button" class="btn btn-primary-soft w-100">Load more post <i class="bi bi-arrow-down-circle ms-2 align-middle"></i></button>
+                    <a href="{{ url('knowledge') }}" class="btn btn-primary-soft w-100">ดูบทความทั้งหมด <i class="bi bi-arrow-down-circle ms-2 align-middle"></i></a>
 
                 </div>
             </div>
@@ -202,6 +202,8 @@
                     </div>
                     <!-- Card item END -->
                 @endforeach
+                <!-- Load more -->
+                <a href="{{ url('watch') }}" class="btn btn-primary-soft w-100">ดูวิดีโอทั้งหมด <i class="bi bi-arrow-down-circle ms-2 align-middle"></i></a>
             </div>
         </div>
     </section>
