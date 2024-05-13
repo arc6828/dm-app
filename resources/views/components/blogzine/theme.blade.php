@@ -517,15 +517,11 @@ Header END -->
             <!-- Widgets START -->
             <div class="row pt-5">
                 <!-- Footer Widget -->
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-md-6 col-lg-3 mb-4">
                     <img class="light-mode-item" src="{{ asset('img/dmapplication.png') }}" alt="logo">
                     <img class="dark-mode-item" src="{{ asset('img/dmapplication.png') }}" alt="logo">
-                    <p class="mt-3">The next-generation blog, news, and magazine theme for you to start sharing your
-                        stories today! This Bootstrap 5 based theme is ideal for all types of sites that deliver the
-                        news.</p>
-                    <div class="mt-4">©{{ date("Y") }} <a href="https://www.dmapplication.com" class="text-reset btn-link"
-                            target="_blank">DMApplication</a>. All rights reserved
-                    </div>
+                    <p class="mt-3">DM Application สร้างขึ้นมาเพื่อใช้เป็นช่องทางการเข้าถึงข้อมูลสุขภาพและบริการสุขภาพที่ทันสมัยในการดูแลสุขภาพตนเองของผู้ป่วยเบาหวานชนิดที่ 2</p>
+                    
                 </div>
 
                 <!-- Footer Widget -->
@@ -533,6 +529,27 @@ Header END -->
                     <h5 class="mb-4">Navigation</h5>
                     <div class="row">
                         <div class="col-6">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ url('/') }}">หน้าหลัก</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ url('/knowledge') }}">คลังความรู้</a>
+                                </li>                                
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ url('/about') }}">เกี่ยวกับเรา</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ url('/contact') }}">ติดต่อเรา</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        {{-- <div class="col-6">
                             <ul class="nav flex-column">
                                 <li class="nav-item"><a class="nav-link pt-0"
                                         href="https://blogzine.webestica.com/about-us.html#">Features</a></li>
@@ -560,7 +577,7 @@ Header END -->
                                 <li class="nav-item"><a class="nav-link"
                                         href="https://blogzine.webestica.com/about-us.html#">Gadgets</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -569,10 +586,10 @@ Header END -->
                     <h5 class="mb-4">Browse by Tag</h5>
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
-                                class="btn btn-sm btn-primary-soft">Travel</a></li>
+                                class="btn btn-sm btn-primary-soft">Diabetes</a></li>
                         <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
-                                class="btn btn-sm btn-warning-soft">Business</a></li>
-                        <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
+                                class="btn btn-sm btn-warning-soft">Health</a></li>
+                        {{-- <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
                                 class="btn btn-sm btn-success-soft">Tech</a></li>
                         <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
                                 class="btn btn-sm btn-danger-soft">Gadgets</a></li>
@@ -587,18 +604,23 @@ Header END -->
                         <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
                                 class="btn btn-sm btn-danger-soft">Covid-19</a></li>
                         <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
-                                class="btn btn-sm btn-info-soft">Politics</a></li>
+                                class="btn btn-sm btn-info-soft">Politics</a></li> --}}
                     </ul>
                 </div>
 
                 <!-- Footer Widget -->
                 <div class="col-sm-6 col-lg-2 mb-4">
-                    <h5 class="mb-4">Our Social handles</h5>
+                    <h5 class="mb-4">Social</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link pt-0"
+                        <li class="nav-item">
+                            <a href="https://lin.ee/WoFBOIo">
+                                <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0">
+                            </a>
+                            {{-- <a class="nav-link pt-0"
                                 href="https://blogzine.webestica.com/about-us.html#"><i
-                                    class="fab fa-facebook-square fa-fw me-2 text-facebook"></i>Facebook</a></li>
-                        <li class="nav-item"><a class="nav-link"
+                                    class="fab fa-facebook-square fa-fw me-2 text-facebook"></i>Facebook</a> --}}
+                        </li>
+                        {{-- <li class="nav-item"><a class="nav-link"
                                 href="https://blogzine.webestica.com/about-us.html#"><i
                                     class="fab fa-twitter-square fa-fw me-2 text-twitter"></i>Twitter</a></li>
                         <li class="nav-item"><a class="nav-link"
@@ -606,8 +628,18 @@ Header END -->
                                     class="fab fa-linkedin fa-fw me-2 text-linkedin"></i>Linkedin</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="https://blogzine.webestica.com/about-us.html#"><i
-                                    class="fab fa-youtube-square fa-fw me-2 text-youtube"></i>YouTube</a></li>
+                                    class="fab fa-youtube-square fa-fw me-2 text-youtube"></i>YouTube</a></li> --}}
                     </ul>
+                </div>
+            </div>
+            <!-- Widgets END -->
+            <!-- Widgets START -->
+            <div class="row">
+                <!-- Footer Widget -->
+                <div class="col-12 mb-4">
+                    <div class="text-center">©{{ date("Y") }} <a href="https://www.dmapplication.com" class="text-reset btn-link"
+                            target="_blank">DMApplication</a>. All rights reserved
+                    </div>
                 </div>
             </div>
             <!-- Widgets END -->
