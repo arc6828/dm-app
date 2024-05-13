@@ -1159,14 +1159,52 @@
     Adv START -->
     <section class="p-0">
         <div class="container">
-            <div class="row">
+            <!-- Service START -->
+            <h3 class="mb-3 mt-5">สิ่งที่เราทำ</h3>
+            <div class="row text-center my-4">
+                <!-- Service item-->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    {{-- <img class="rounded-circle" src="blogzine/01(1).jpg" alt="Card image"> --}}
+                    <div class="my-4 text-primary">
+                        <i class="fas fa-cloud fs-1"></i>
+                    </div>
+                    <h4 class="mt-3">การบันทึกข้อมูล</h4>
+                    <p>การบันทึกข้อมูลผู้ป่วย การบันทึกค่าระดับน้ำตาลในเลือด และการบันทึกตารางการนัดหมาย</p>
+                </div>
+                <!-- Service item-->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="my-4 text-warning">
+                        <i class="far fa-folder-open fs-1"></i>
+                    </div>
+                    <h4 class="mt-3">ความรู้ทั่วไป</h4>
+                    <p>ความรู้ทั่วไปเกี่ยวกับโรคเบาหวานและอาการแทรกซ้อน การรับประทานอาหาร การออกกำลังกาย การจัดการความเครียด และการใช้ยา </p>
+                </div>
+                <!-- Service item-->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="my-4 text-danger">
+                        <i class="far fa-bell fs-1"></i>
+                    </div>
+                    <h4 class="mt-3">การแจ้งเตือน</h4>
+                    <p>การแจ้งเตือนความผิดปกติของระดับน้ำตาลในเลือด และการแจ้งเตือนการนัดหมายที่กำลังจะมาถึง</p>
+                </div>
+                <!-- Service item-->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="my-4  text-success">
+                        <i class="far fa-comments fs-1"></i>
+                    </div>
+                    <h4 class="mt-3">พูดคุย</h4>
+                    <p>พูดคุยแชทกับทีมสุขภาพ ผ่านช่องทางที่ผู้ใช้งานสะดวก</p>
+                </div>
+            </div>
+            <!-- Service END -->
+            {{-- <div class="row">
                 <div class="col">
                     <a href="https://blogzine.webestica.com/index-2.html#" class="d-block card-img-flash">
                         <img src="blogzine/adv-3.png" alt="">
                     </a>
                     <small class="text-end d-block mt-1">Advertisement</small>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- =======================

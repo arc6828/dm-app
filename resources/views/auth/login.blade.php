@@ -6,40 +6,40 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 col-xl-6 mx-auto">
                     <div class="p-4 p-sm-5 bg-primary bg-opacity-10 rounded">
-                        <h2>Log in to your account</h2>
+                        <h2>ลงชื่อเข้าใช้</h2>
                         <!-- Form START -->
                         <form class="mt-4" method="POST" action="{{ route('login') }}">
                             @csrf
                             
                             <!-- Email -->
                             <div class="mb-3">
-                                <label class="form-label" for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required>
+                                <label class="form-label" for="exampleInputEmail1">อีเมล์</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="user@example.com" required>
                             </div>
                             <!-- Password -->
                             <div class="mb-3">
-                                <label class="form-label" for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="*********" required>
+                                <label class="form-label" for="exampleInputPassword1">รหัสผ่าน</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="มีความยาวอย่างน้อย 8 ตัวอักษร" required>
                             </div>
                             <!-- Checkbox -->
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                                <label class="form-check-label" for="exampleCheck1">keep me signed in</label>
+                                <label class="form-check-label" for="remember">ลงชื่อเข้าใช้เสมอ</label>
                             </div>
                             <!-- Button -->
                             <div class="row align-items-center">
                                 <div class="col-sm-4">
-                                    <button type="submit" class="btn btn-success">Sign me in</button>
+                                    <button type="submit" class="btn btn-success">ลงชื่อเข้าใช้</button>
                                 </div>
                                 <div class="col-sm-8 text-sm-end">
-                                    <span>Don't have an account? <a href="{{ route('register') }}"><u>Sign up</u></a></span>
+                                    <span>ไม่มีบัญชี? <a href="{{ route('register') }}"><u>ลงทะเบียนผู้ใช้ใหม่</u></a></span>
                                 </div>
                             </div>
                         </form>
                         <!-- Form END -->
                         <hr>
                         <!-- Social-media btn -->
-                        <div class="text-center">
+                        <div class="text-center d-none">
                             <p>Sign in with your social network for quick access</p>
                             <ul class="list-unstyled d-sm-flex mt-3 justify-content-center">
                                 <li class="mx-2">
