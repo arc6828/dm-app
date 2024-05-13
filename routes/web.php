@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
+    $items = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
                    
-    return view('home-blog-classic', compact("posts"));
+    return view('home-blog-classic', compact("posts","items"));
     // return view('home');
     // return view('welcome');
 });

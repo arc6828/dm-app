@@ -175,194 +175,33 @@
     <!-- =======================Small post START -->
     <section class="pt-4 pb-0">
         <div class="container">
+            <h3 class="mb-3 mt-5">วิดีโอ</h3>
             <div class="row">
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/07(1).jpg" alt="Card image">
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">7 common mistakes everyone makes while traveling</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Louis Ferguson</a>
-                                </li>
-                                <li class="nav-item">Mar 07, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/08.jpg" alt="Card image">
-                            <div class="card-img-overlay d-flex align-items-start flex-column p-3">
-                                <!-- Card overlay Top -->
-                                <div class="w-100 mb-auto d-flex justify-content-end">
-                                    <div class="text-end ms-auto">
-                                        <!-- Card format icon -->
-                                        <div class="icon-md bg-white bg-opacity-10 bg-blur text-white fw-bold rounded-circle" title="8.5 rating">8.5</div>
-                                    </div>
-                                </div>
+                @foreach ($items as $index => $item)
+                    <!-- Card item START -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card mb-4">
+                            <!-- Card img -->
+                            <div class="card-fold position-relative">
+                                <img class="card-img" src="{{ $item->snippet->thumbnails->medium->url }}" alt="Card image">
+                            </div>
+                            <div class="card-body px-0 pt-3">
+                                <h5 class="card-title">
+                                    <a href="{{ url('watch/'.$item->id) }}" class="btn-link text-reset stretched-link fw-bold">{{ $item->snippet->title }}</a>
+                                </h5>
+                                <!-- Card info -->
+                                <ul class="nav nav-divider align-items-center text-uppercase small">
+                                    <li class="nav-item">
+                                        <a href="#{{ $item->snippet->videoOwnerChannelId  }}" class="nav-link text-reset btn-link">{{ mb_substr($item->snippet->videoOwnerChannelTitle,0,20)  }}</a>
+                                    </li>
+                                    <li class="nav-item">{{ date("M d, Y",strtotime($item->snippet->publishedAt)) }}</li>
+                                    {{-- <li class="nav-item">Mar 07, 2022</li> --}}
+                                </ul>
                             </div>
                         </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">Skills that you can learn from business</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Samuel Bishop</a>
-                                </li>
-                                <li class="nav-item">Aug 15, 2022</li>
-                            </ul>
-                        </div>
                     </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/09.jpg" alt="Card image">
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">10 tell-tale signs you need to get a new business</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Dennis Barrett</a>
-                                </li>
-                                <li class="nav-item">Jun 01, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/10.jpg" alt="Card image">
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">This is why this year will be the year of startups</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Bryan Knight</a>
-                                </li>
-                                <li class="nav-item">Dec 07, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/11.jpg" alt="Card image">
-                            <div class="card-img-overlay d-flex align-items-start flex-column p-3">
-                                <!-- Card overlay Top -->
-                                <div class="w-100 mb-auto d-flex justify-content-end">
-                                    <div class="text-end ms-auto">
-                                        <!-- Card format icon -->
-                                        <div class="icon-md bg-success text-white fw-bold rounded-circle" title="This post has video"><i class="fas fa-video"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">Best Pinterest Boards for learning about business</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Judy Nguyen</a>
-                                </li>
-                                <li class="nav-item">Sep 07, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/12.jpg" alt="Card image">
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">How did we get here? The real history of our business</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Amanda Reed</a>
-                                </li>
-                                <li class="nav-item">Aug 06, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/13.jpg" alt="Card image">
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">Facts about business that will put you in a good mood</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Joan Wallace</a>
-                                </li>
-                                <li class="nav-item">Feb 18, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-                <!-- Card item START -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card mb-4">
-                        <!-- Card img -->
-                        <div class="card-fold position-relative">
-                            <img class="card-img" src="blogzine/14.jpg" alt="Card image">
-                            <div class="card-img-overlay d-flex align-items-start flex-column p-3">
-                                <!-- Card overlay Top -->
-                                <div class="w-100 mb-auto d-flex justify-content-end">
-                                    <div class="text-end ms-auto">
-                                        <!-- Card format icon -->
-                                        <div class="icon-md bg-danger text-white fw-bold rounded-circle" title="This post has audio"><i class="fas fa-volume-up"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body px-0 pt-3">
-                            <h4 class="card-title"><a href="https://blogzine.webestica.com/post-single.html" class="btn-link text-reset stretched-link fw-bold">Questions everyone working in IT should know how to answer</a></h4>
-                            <!-- Card info -->
-                            <ul class="nav nav-divider align-items-center text-uppercase small">
-                                <li class="nav-item">
-                                    <a href="https://blogzine.webestica.com/index-5.html#" class="nav-link text-reset btn-link">Lori Stevens</a>
-                                </li>
-                                <li class="nav-item">Jun 03, 2022</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
+                    <!-- Card item END -->
+                @endforeach
             </div>
         </div>
     </section>
