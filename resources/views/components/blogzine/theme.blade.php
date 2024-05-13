@@ -611,14 +611,12 @@ Header END -->
                 <!-- Footer Widget -->
                 <div class="col-sm-6 col-lg-2 mb-4">
                     <h5 class="mb-4">Social</h5>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column">         
                         <li class="nav-item">
-                            <a href="https://lin.ee/WoFBOIo">
-                                <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0">
-                            </a>
-                            {{-- <a class="nav-link pt-0"
-                                href="https://blogzine.webestica.com/about-us.html#"><i
-                                    class="fab fa-facebook-square fa-fw me-2 text-facebook"></i>Facebook</a> --}}
+                            <a href="https://lin.ee/WoFBOIo" class="btn btn-sucsess" style="background-color: #00B900;">
+                                <img src="{{ asset('img/Line.png') }}" alt="เพิ่มเพื่อน-แชท" style="height:30px;" border="0">
+                                <span class="text-white fs-6">เพิ่มเพื่อน/แชท</span>
+                            </a>                            
                         </li>
                         {{-- <li class="nav-item"><a class="nav-link"
                                 href="https://blogzine.webestica.com/about-us.html#"><i
