@@ -65,3 +65,21 @@ Route::get('/post/{slug}', function($slug){
 
     return view("post", compact("post"));
 });
+
+Route::get('/watch', function(){
+    $items = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
+                   
+    return view('watch', compact("items"));
+});
+
+Route::get('/watch/{slug}', function($slug){
+    $posts = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
+    // "guid": "https://medium.com/p/8156e4fe87f0",
+
+    $posts = array_filter($posts, function($item) use ($slug){
+        return ($item->id == $slug);
+    });
+    $post = end($posts);
+
+    return view("post-watch", compact("post"));
+});

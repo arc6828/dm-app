@@ -164,6 +164,9 @@
                             <a class="nav-link" href="{{ url('/knowledge') }}">คลังความรู้</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/watch') }}">คลังวีดิโอ</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('/contact') }}">ติดต่อเรา</a>
                         </li>
 

@@ -1,7 +1,6 @@
 {
     "kind": "youtube#playlistItemListResponse",
-    "etag": "OMNTkh3Dnf-5wvB6gg76O_U3h5A",
-    "nextPageToken": "EAAajgFQVDpDQVVpRURFeVJVWkNNMEl4UXpVM1JFVTBSVEVvQVVpWjVPUDZpNHFHQTFBQldrVWlRMmxLVVZSSVdtOWxhemcwV1Zoa2VsVlZaRk5rTTFaWVlsZFJkR1JYVmxoV01VSmFaRlJrUmsxWFpGUmliWFF5UldkM1NYTjJMVWR6WjFsUmNWQjJjekpCVFNJ",
+    "etag": "OeR8j369_AUZeBQUQe6FA1RbqD8",
     "items": [
         {
             "kind": "youtube#playlistItem",
@@ -237,10 +236,99 @@
                 "videoOwnerChannelTitle": "กองโรคไม่ติดต่อ กรมควบคุมโรค",
                 "videoOwnerChannelId": "UCNo82psf1f5012j9OWzk90g"
             }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "J2UYk_Py1DcqliKJEB6WnrQV7J4",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi4xMkVGQjNCMUM1N0RFNEUx",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:21:47Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "หลักโภชนากับการป้องกันโรคเบาหวาน",
+                "description": "การรับประทานอาหารตามหลักโภชนาการมีความสำคัญต่อการป้องกันโรคเบาหวาน",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ZM7AS5-w_cE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ZM7AS5-w_cE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ZM7AS5-w_cE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/ZM7AS5-w_cE/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 5,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "ZM7AS5-w_cE"
+                },
+                "videoOwnerChannelTitle": "กองโรคไม่ติดต่อ กรมควบคุมโรค",
+                "videoOwnerChannelId": "UCNo82psf1f5012j9OWzk90g"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "YqqWCEb1G2aTFURqBZvetX1RHUE",
+            "id": "UEx2aHpPOGF3c1FHUnd1V21kLXVlV1dQWXU3RTFnU25rdi41MzJCQjBCNDIyRkJDN0VD",
+            "snippet": {
+                "publishedAt": "2024-05-13T07:22:26Z",
+                "channelId": "UCPgbjJsmp2-wO-2gOL2hxCw",
+                "title": "[PODCAST] Food Choice | EP.1 - อาหารสำหรับผู้ป่วยเบาหวาน | Mahidol Channel",
+                "description": "พบกับ Mahidol Channel Podcast รายการใหม่ Food Choice : กินดี สุขภาพดีเลือกได้ กับคุณหมอเอ๋ ผศ.พญ.ดรุณีวัลย์ วโรดมวิจิตร รายการที่จะชวนทุกมาพูดคุยเกี่ยวกับรูปแบบการกินอาหาร ที่ปลอดภัยกับสุขภาพ \n\nเริ่มตอนแรกกับโรคฮิตของคนไทยนั่นก็คือ “โรคเบาหวาน” โดยในตอนนี้หมอเอ๋ จะมาแนะนำให้รู้จักโรคเบาหวานและรูปแบบการรับประทานอาหารสำหรับคนไข้เบาหวาน นั่นก็คือ “Diabetic Diet” ซึ่งเป็นอาหารสุขภาพที่มีรสไม่หวานจัด และคำนึงถึงปริมาณ การเลือกชนิดของอาหารในหมวดข้าว แป้ง และไขมันเป็นสำคัญ เพื่อช่วยควบคุมระดับน้ำตาลและไขมันในเลือด อ.เอ๋ จะมาแนะนำสูตรไม่ลับที่จะช่วยควบคุมระดับน้ำตาลในเลือดนั่นก็คือ “การแบ่งปริมาณสัดส่วนอาหารต่อ 1 จาน” รวมไปถึง “10 เทคนิคการเลือกรับประทานอาหารสำหรับผู้ป่วยเบาหวาน” ที่จะเป็นส่วนช่วยเรื่องการควบคุมระดับน้ำตาลในเลือดได้เป็นอย่างดี\n__________________\n#เบาหวาน\n#FoodChoice\n#MahidolChannelPODCAST \n#MahidolChannel\n––––––––––––––––––––\n📌ช่องทางการฟัง Podcast\nBlockdit: https://www.blockdit.com/mahidolchannel\nSpotify: https://spoti.fi/31v1Rmx\nAnchor: https://anchor.fm/mahidolchannel\nSoundcloud: https://soundcloud.com/mahidolchannel\nApple Podcasts: https://apple.co/2Oxp5FN\n––––––––––––––––––––\nYouTube: http://www.youtube.com/mahidolchannel​​\nFacebook: http://www.facebook.com/mahidolchannel​​\nMahidol University มหาวิทยาลัยมหิดล: https://www.mahidol.ac.th/th​​\nWebsite | https://channel.mahidol.ac.th/\nคณะแพทยศาสตร์โรงพยาบาลรามาธิบดี ม.มหิดล | https://med.mahidol.ac.th",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/n3MOprH-CYY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/n3MOprH-CYY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/n3MOprH-CYY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/n3MOprH-CYY/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/n3MOprH-CYY/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Chavalit Koweerawong",
+                "playlistId": "PLvhzO8awsQGRwuWmd-ueWWPYu7E1gSnkv",
+                "position": 6,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "n3MOprH-CYY"
+                },
+                "videoOwnerChannelTitle": "Mahidol Channel มหิดล แชนแนล",
+                "videoOwnerChannelId": "UCfaj2PbuQHpJEtXsc0_6aIA"
+            }
         }
     ],
     "pageInfo": {
         "totalResults": 7,
-        "resultsPerPage": 5
+        "resultsPerPage": 10
     }
 }
