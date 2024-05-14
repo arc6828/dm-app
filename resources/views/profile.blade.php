@@ -24,15 +24,17 @@
                                 <div
                                     class="col-sm-12 col-md text-center text-md-start d-md-flex justify-content-between align-items-center">
                                     <div>
-                                        <h4 class="my-1">Louis Ferguson <i
-                                                class="bi bi-patch-check-fill text-info small"></i></h4>
+                                        <h4 class="my-1">
+                                            {{ Auth::user()->name }}
+                                            <i class="bi bi-patch-check-fill text-info small"></i>
+                                        </h4>
                                         <ul class="list-inline">
-                                            <li class="list-inline-item"><i class="bi bi-person-fill me-1"></i> An
-                                                editor at Blogzine</li>
-                                            <li class="list-inline-item"><i class="bi bi-geo-alt me-1"></i> New York
+                                            <li class="list-inline-item"><i class="bi bi-person-fill me-1"></i>
+                                                บัญชีผู้ใช้งาน</li>
+                                            <li class="list-inline-item"><i class="bi bi-geo-alt me-1"></i> ประเทศไทย
                                             </li>
                                             <li class="list-inline-item"><i class="bi bi-calendar2-plus me-1"></i>
-                                                Joined on Jan 15, 2018</li>
+                                                เข้าร่วมเมื่อ {{ Auth::user()->created_at }} </li>
                                         </ul>
                                         <p class="m-0"></p>
                                     </div>
@@ -89,19 +91,19 @@
                     <!-- Profile START -->
                     <div class="card border mb-4">
                         <div class="card-header border-bottom p-3">
-                            <h5 class="card-header-title mb-0">Profile</h5>
+                            <h5 class="card-header-title mb-0">โปรไฟล์ผู้ใช้งาน</h5>
                         </div>
                         <div class="card-body">
                             <!-- Full name -->
                             <div class="mb-3">
-                                <label class="form-label">Full name</label>
+                                <label class="form-label">ชื่อ - นามสกุล</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" value="Louis" placeholder="First name">
-                                    <input type="text" class="form-control" value="Ferguson" placeholder="Last name">
+                                    <input type="text" class="form-control" value="{{ Auth::user()->name }}"
+                                        placeholder="name">
                                 </div>
                             </div>
                             <!-- Username -->
-                            <div class="mb-3">
+                            <div class="mb-3 d-none">
                                 <label class="form-label">Username</label>
                                 <div class="input-group">
                                     <span class="input-group-text">webestica.com</span>
@@ -132,27 +134,33 @@
                                 </div>
                                 <!-- Avatar upload END -->
                             </div>
-                            <!-- Job title -->
+                            <!-- Sex -->
                             <div class="mb-3">
-                                <label class="form-label">Job title</label>
-                                <input class="form-control" type="text" value="An editor at Blogzine">
+                                <label class="form-label">เพศ</label>
+                                <input class="form-control" type="text" value="ชาย">
                             </div>
-                            <!-- Location -->
+                            <!-- dm-type -->
                             <div class="mb-3">
-                                <label class="form-label">Location</label>
-                                <input class="form-control" type="text" value="New Hampshire">
+                                <label class="form-label">ประเภทเบาหวานที่เป็น</label>
+                                <input class="form-control" type="text" value="เบาหวานประเภทที่ 2">
                             </div>
-                            <!-- Bio -->
+                            <!-- drug_allery -->
                             <div class="mb-3">
-                                <label class="form-label">Bio</label>
-                                <textarea class="form-control" rows="3">I’ve found a way to get paid for my favorite hobby, and do so while following my dream of traveling the world.</textarea>
-                                <div class="form-text">Brief description for your profile.</div>
+                                <label class="form-label">แพ้ยา</label>
+                                <textarea class="form-control" rows="3">แพ้ยา ... </textarea>
+                                <div class="form-text">โปรดระบุอย่างละเอียด</div>
+                            </div>
+                            <!-- drug -->
+                            <div class="mb-3">
+                                <label class="form-label">ยาที่ใช้</label>
+                                <textarea class="form-control" rows="3">ยาที่ใช้ ... </textarea>
+                                <div class="form-text">โปรดระบุอย่างละเอียด</div>
                             </div>
                             <!-- Birthday -->
                             <div>
-                                <label class="form-label">Birthday</label>
-                                <input type="text" class="form-control flatpickr-input" placeholder="DD/MM/YYYY"
-                                    value="12/10/1990">
+                                <label class="form-label">วันเกิด</label>
+                                <input type="date" class="form-control flatpickr-input" placeholder="DD/MM/YYYY"
+                                    value="2000-01-31">
                             </div>
                             <!-- Save button -->
                             <div class="d-flex justify-content-end mt-4">
@@ -164,7 +172,7 @@
                     <!-- Profile END -->
 
                     <!-- Personal information START -->
-                    <div class="card border mb-4">
+                    <div class="card border mb-4 d-none">
                         <div class="card-header border-bottom p-3">
                             <h5 class="card-header-title mb-0">Personal information</h5>
                         </div>
@@ -194,7 +202,7 @@
                     <!-- Personal information END -->
 
                     <!-- Social links START -->
-                    <div class="card border mb-4">
+                    <div class="card border mb-4  d-none">
                         <div class="card-header border-bottom p-3">
                             <h5 class="card-header-title mb-0"> Social links</h5>
                         </div>
@@ -223,7 +231,7 @@
                     <!-- Social links END -->
 
                     <!-- Update password START -->
-                    <div class="card border">
+                    <div class="card border  d-none">
                         <div class="card-header border-bottom p-3">
                             <h5 class="card-header-title mb-0">Update password</h5>
                         </div>
@@ -333,7 +341,7 @@
                     <!-- Deactivate account START -->
                     <p><i class="bi bi-info-circle me-2"></i>This account was created on Jan 15, 2018</p>
 
-                    <div class="card bg-transparent border rounded-3 mt-4">
+                    <div class="card bg-transparent border rounded-3 mt-4 d-none">
                         <!-- Card header -->
                         <div class="card-header bg-transparent border-bottom p-3">
                             <h5 class="card-header-title mb-0">Linked account</h5>

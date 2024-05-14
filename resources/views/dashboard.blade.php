@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row g-4">
 
-                <div class="col-12">
+                <div class="col-12 d-none">
                     <!-- Counter START -->
                     <div class="row g-4">
 
@@ -18,8 +18,8 @@
                                     </div>
                                     <!-- Content -->
                                     <div class="ms-3">
-                                        <h3>134K</h3>
-                                        <h6 class="mb-0">Pageviews</h6>
+                                        <h3>80</h3>
+                                        <h6 class="mb-0">ระดับน้ำตาลในเลือด</h6>
                                     </div>
                                 </div>
                             </div>
@@ -81,12 +81,23 @@
                 </div>
 
                 <div class="col-xl-8">
-                    <!-- Chart START -->
+                    <!-- Sugar Blood Chart START -->
                     <div class="card border h-100">
 
                         <!-- Card header -->
-                        <div class="card-header p-3 border-bottom">
-                            <h5 class="card-header-title mb-0">Traffic stats</h5>
+                        {{-- <div class="card-header p-3 border-bottom">
+                            <h5 class="card-header-title mb-0">
+                                ระดับน้ำตาลในเลือด
+                            </h5>
+                        </div> --}}
+                        <div class="card-header border-bottom p-3">
+                            <div class="d-sm-flex justify-content-between align-items-center">
+                                <h5 class="mb-2 mb-sm-0">
+                                    ระดับน้ำตาลในเลือด
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">105</span>
+                                </h5>
+                                <a href="#" class="btn btn-sm btn-primary mb-0">เพิ่มรายการ</a>
+                            </div>
                         </div>
                         <!-- Card body -->
                         <div class="card-body">
@@ -94,62 +105,46 @@
                             <div id="apexChartTrafficStats" class="mt-2"></div>
                         </div>
                     </div>
-                    <!-- Chart END -->
+                    <!-- Sugar Blood Chart END -->
                 </div>
 
                 <div class="col-md-6 col-xxl-4">
-                    <!-- Latest blog START -->
+                    <!-- Detail Sugar Blood START -->
                     <div class="card border h-100">
                         <!-- Card header -->
                         <div class="card-header border-bottom p-3">
-                            <h5 class="card-header-title mb-0">Latest post</h5>
-                        </div>
+                            <h5 class="card-header-title mb-0">รายละเอียดระดับน้ำตาลในเลือด</h5>
+                        </div>                        
 
                         <!-- Card body START -->
                         <div class="card-body p-3">
 
                             <div class="row">
+                                @php
+                                $blood_sugar_list = [
+                                    (object)["level"=>80, "created_at"=>"May 15, 2024"],
+                                    (object)["level"=>90, "created_at"=>"May 16, 2024"],
+                                    (object)["level"=>100, "created_at"=>"May 17, 2024"],
+                                    (object)["level"=>100, "created_at"=>"May 18, 2024"],
+                                ];
+                                @endphp
+                                @foreach($blood_sugar_list  as $item)
                                 <!-- Blog item -->
                                 <div class="col-12">
                                     <div class="d-flex align-items-center position-relative">
-                                        <img class="w-60 rounded" src="blogzine/01.jpg" alt="product">
-                                        <div class="ms-3">
-                                            <a href="#" class="h6 stretched-link">Dirty little secrets about the
-                                                business industry</a>
-                                            <p class="small mb-0">Jun 17, 2022</p>
+                                        {{-- <img class="w-60 rounded" src="blogzine/01.jpg" alt="product"> --}}
+                                        <div class="ms-3">                                            
+                                            <p class="small mb-0">{{ $item->created_at }}</p>
+                                            <a href="#" class="h6 stretched-link">{{ $item->level }} (mg/dl)</a>
                                         </div>
                                     </div>
                                 </div>
-
+                                @if(! $loop->last)
                                 <!-- Divider -->
                                 <hr class="my-3">
+                                @endif
+                                @endforeach
 
-                                <!-- Blog item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        <img class="w-60 rounded" src="blogzine/02.jpg" alt="product">
-                                        <div class="ms-3">
-                                            <a href="#" class="h6 stretched-link">12 worst types of business
-                                                accounts you follow on Twitter</a>
-                                            <p class="small mb-0">Nov 11, 2022</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Divider -->
-                                <hr class="my-3">
-
-                                <!-- Blog item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        <img class="w-60 rounded" src="blogzine/03.jpg" alt="product">
-                                        <div class="ms-3">
-                                            <a href="#" class="h6 stretched-link">Bad habits that people in the
-                                                industry need to quit</a>
-                                            <p class="small mb-0">Sep 01, 2022</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!-- Card body END -->
@@ -160,9 +155,9 @@
                         </div>
 
                     </div>
-                    <!-- Latest blog END -->
+                    <!-- Detail Sugar Blood END -->
                 </div>
-
+                @if(false)
                 <div class="col-md-6 col-xxl-4">
                     <!-- Recent comment START -->
                     <div class="card border h-100">
@@ -366,7 +361,8 @@
                                             <div class="d-sm-flex">
                                                 <div
                                                     class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2 flex-shrink-0">
-                                                    <i class="fas fa-globe fs-5"></i></div>
+                                                    <i class="fas fa-globe fs-5"></i>
+                                                </div>
                                                 <!-- Info -->
                                                 <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
                                                     <h6 class="mb-0"><a href="#"
@@ -420,7 +416,374 @@
                     </div>
                 </div>
 
+                @endif
+
                 <div class="col-12">
+                    <!-- Drug Usage table START -->
+                    <div class="card border bg-transparent rounded-3">
+                        <!-- Card header START -->
+                        <div class="card-header bg-transparent border-bottom p-3">
+                            <div class="d-sm-flex justify-content-between align-items-center">
+                                <h5 class="mb-2 mb-sm-0">ตารางการใช้ยา<span
+                                        class="badge bg-primary bg-opacity-10 text-primary">105</span></h5>
+                                <a href="#" class="btn btn-sm btn-primary mb-0">เพิ่มรายการ</a>
+                            </div>
+                        </div>
+                        <!-- Card header END -->
+
+                        <!-- Card body START -->
+                        <div class="card-body">
+
+                            <!-- Search and select START -->
+                            <div class="row g-3 align-items-center justify-content-between mb-3">
+                                <!-- Search -->
+                                <div class="col-md-8">
+                                    <form class="rounded position-relative">
+                                        <input class="form-control pe-5 bg-transparent" type="search"
+                                            placeholder="Search" aria-label="Search">
+                                        <button
+                                            class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
+                                            type="submit"><i class="fas fa-search fs-6 "></i></button>
+                                    </form>
+                                </div>
+
+                                <!-- Select option -->
+                                <div class="col-md-3">
+                                    <!-- Short by filter -->
+                                    <form>
+                                        <select class="form-select z-index-9 bg-transparent"
+                                            aria-label=".form-select-sm">
+                                            <option value="">Sort by</option>
+                                            <option>Free</option>
+                                            <option>Newest</option>
+                                            <option>Oldest</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Search and select END -->
+
+                            <!-- Blog list table START -->
+                            <div class="table-responsive border-0">
+                                <table class="table align-middle p-4 mb-0 table-hover table-shrink">
+                                    <!-- Table head -->
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th scope="col" class="border-0 rounded-start">ชื่อยา</th>
+                                            <th scope="col" class="border-0">ปริมาณยา</th>
+                                            <th scope="col" class="border-0">Categories</th>
+                                            <th scope="col" class="border-0">Status</th>
+                                            <th scope="col" class="border-0 rounded-end">Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <!-- Table body START -->
+                                    <tbody class="border-top-0">
+                                        @php
+                                            $drug_usage_list = [
+                                                (object) ["name"=>"Drug A","dose"=>"100","time"=>"เช้า","before_after"=>"่ก่อน","route"=>"ยากิน"],
+                                                (object) ["name"=>"Drug B","dose"=>"1000","time"=>"กลางวัน","before_after"=>"่หลัง","route"=>"ยาฉีด"],
+                                                (object) ["name"=>"Drug C","dose"=>"10000","time"=>"เย็น","before_after"=>"่ก่อน","route"=>"ยากิน"],
+                                                (object) ["name"=>"Drug D","dose"=>"1000","time"=>"เช้า","before_after"=>"่หลัง","route"=>"ยาฉีด"],
+                                            ];
+                                        @endphp
+                                        <!-- Table item -->
+                                        @foreach($drug_usage_list as $item)
+                                        <tr>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">{{ $item->name }}</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="mb-0"><a href="#">{{ $item->dose }}</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <a href="#" class="badge text-bg-warning mb-2">
+                                                    <i class="fas fa-circle me-2 small fw-bold"></i>{{ $item->before_after }}อาหาร
+                                                </a>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <span
+                                                    class="badge bg-success bg-opacity-10 text-success mb-2">{{ $item->time }}</span>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <div class="d-flex gap-2">
+                                                    <a href="#" class="btn btn-light btn-round mb-0"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Delete"><i class="bi bi-trash"></i></a>
+                                                    <a href="dashboard-post-edit.html"
+                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+
+                                        @if(false)
+                                        <!-- Table item -->
+                                        <tr>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Dirty
+                                                        little secrets about the business industry</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="mb-0"><a href="#">Dennis Barrett</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>Jan 19, 2022</td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <a href="#" class="badge text-bg-info mb-2"><i
+                                                        class="fas fa-circle me-2 small fw-bold"></i>Marketing</a>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <span
+                                                    class="badge bg-warning bg-opacity-15 text-warning mb-2">Draft</span>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <div class="d-flex gap-2">
+                                                    <a href="#" class="btn btn-light btn-round mb-0"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Delete"><i class="bi bi-trash"></i></a>
+                                                    <a href="dashboard-post-edit.html"
+                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Table item -->
+                                        <tr>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">7 common
+                                                        mistakes everyone makes while traveling</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="mb-0"><a href="#">Billy Vasquez</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>Nov 11, 2022</td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <a href="#" class="badge text-bg-danger mb-2"><i
+                                                        class="fas fa-circle me-2 small fw-bold"></i>Photography</a>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <span
+                                                    class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <div class="d-flex gap-2">
+                                                    <a href="#" class="btn btn-light btn-round mb-0"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Delete"><i class="bi bi-trash"></i></a>
+                                                    <a href="dashboard-post-edit.html"
+                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Table item -->
+                                        <tr>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">5
+                                                        investment doubts you should clarify</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="mb-0"><a href="#">Lori Stevens</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>Jan 22, 2022</td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <a href="#" class="badge text-bg-success mb-2"><i
+                                                        class="fas fa-circle me-2 small fw-bold"></i>Gadgets</a>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <span
+                                                    class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <div class="d-flex gap-2">
+                                                    <a href="#" class="btn btn-light btn-round mb-0"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Delete"><i class="bi bi-trash"></i></a>
+                                                    <a href="dashboard-post-edit.html"
+                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Table item -->
+                                        <tr>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Bad
+                                                        habits that people in the industry need to quit</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="mb-0"><a href="#">Larry Lawson</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>Dec 06, 2022</td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <a href="#" class="badge bg-primary mb-2"><i
+                                                        class="fas fa-circle me-2 small fw-bold"></i>Sports</a>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <span
+                                                    class="badge bg-danger bg-opacity-10 text-danger mb-2">Removed</span>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <div class="d-flex gap-2">
+                                                    <a href="#" class="btn btn-light btn-round mb-0"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Delete"><i class="bi bi-trash"></i></a>
+                                                    <a href="dashboard-post-edit.html"
+                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Table item -->
+                                        <tr>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Around
+                                                        the web: 20 fabulous infographics about business</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <h6 class="mb-0"><a href="#">Bryan Knight</a></h6>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>Feb 14, 2022</td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <a href="#" class="badge text-bg-danger mb-2"><i
+                                                        class="fas fa-circle me-2 small fw-bold"></i>Travel</a>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <span
+                                                    class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
+                                            </td>
+                                            <!-- Table data -->
+                                            <td>
+                                                <div class="d-flex gap-2">
+                                                    <a href="#" class="btn btn-light btn-round mb-0"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Delete"><i class="bi bi-trash"></i></a>
+                                                    <a href="dashboard-post-edit.html"
+                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit"><i
+                                                            class="bi bi-pencil-square"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        @endif
+
+                                    </tbody>
+                                    <!-- Table body END -->
+                                </table>
+                            </div>
+                            <!-- Blog list table END -->
+
+                            <!-- Pagination START -->
+                            <div class="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3">
+                                <!-- Content -->
+                                <p class="mb-sm-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
+                                <!-- Pagination -->
+                                <nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
+                                    <ul class="pagination pagination-sm pagination-bordered mb-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1"
+                                                aria-disabled="true">Prev</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">..</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">15</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- Pagination END -->
+                        </div>
+                    </div>
+                    <!-- Drug Usage table END -->
+                </div>
+
+                <div class="col-12">
+                    <!-- Calendar START -->
+                    <div class="card border bg-transparent rounded-3">
+                        <!-- Card header START -->
+                        <div class="card-header bg-transparent border-bottom p-3">
+                            <div class="d-sm-flex justify-content-between align-items-center">
+                                <h5 class="mb-2 mb-sm-0">
+                                    กำหนดนัดผู้ป่วย
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">{{ Auth::user()->name }}</span>
+                                </h5>
+                                <a href="#" class="btn btn-sm btn-primary mb-0">เพิ่มนัด</a>
+                            </div>
+                        </div>
+                        <!-- Card header END -->
+
+                        <!-- Card body START -->
+                        <div class="card-body">
+                            <div id='calendar'></div>
+                            <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    var calendarEl = document.getElementById('calendar');
+                                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                                        initialView: 'dayGridMonth',
+                                        events: [
+                                            { title: 'นัดครั้งที่ 1', start: '2024-05-01' },
+                                            { title: 'นัดครั้งที่ 2', start: '2024-05-05', end: '2010-01-07' },
+                                            { title: 'นัดครั้งที่ 3', start: '2024-05-09T12:30:00', allDay: false }
+                                        ]
+                                    });
+                                    calendar.render();
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                    <!-- Calendar END -->
+                </div>
+                <div class="col-12 d-none">
                     <!-- Blog list table START -->
                     <div class="card border bg-transparent rounded-3">
                         <!-- Card header START -->
