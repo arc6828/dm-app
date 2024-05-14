@@ -481,10 +481,10 @@
                                     <tbody class="border-top-0">
                                         @php
                                             $drug_usage_list = [
-                                                (object) ["name"=>"Drug A","dose"=>"100","time"=>"เช้า","before_after"=>"่ก่อน","route"=>"ยากิน"],
-                                                (object) ["name"=>"Drug B","dose"=>"1000","time"=>"กลางวัน","before_after"=>"่หลัง","route"=>"ยาฉีด"],
-                                                (object) ["name"=>"Drug C","dose"=>"10000","time"=>"เย็น","before_after"=>"่ก่อน","route"=>"ยากิน"],
-                                                (object) ["name"=>"Drug D","dose"=>"1000","time"=>"เช้า","before_after"=>"่หลัง","route"=>"ยาฉีด"],
+                                                (object) ["name"=>"Drug A","dose"=>"100","time"=>"เช้า","before_after"=>"ก่อน","route"=>"ยากิน"],
+                                                (object) ["name"=>"Drug B","dose"=>"1000","time"=>"กลางวัน","before_after"=>"หลัง","route"=>"ยาฉีด"],
+                                                (object) ["name"=>"Drug C","dose"=>"10000","time"=>"เย็น","before_after"=>"ก่อน","route"=>"ยากิน"],
+                                                (object) ["name"=>"Drug D","dose"=>"1000","time"=>"เช้า","before_after"=>"หลัง","route"=>"ยาฉีด"],
                                             ];
                                         @endphp
                                         <!-- Table item -->
