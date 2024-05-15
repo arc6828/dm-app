@@ -17,7 +17,7 @@
                                 <div class="col-sm-12 col-md-auto text-center text-md-start">
                                     <div class="avatar avatar-xxl mt-n5">
                                         <img class="avatar-img rounded-circle border border-white border-3 shadow"
-                                            src="blogzine/03.jpg" alt="">
+                                            src="{{ Auth::user()->avatar }}" alt="">
                                     </div>
                                 </div>
                                 <!-- Profile info -->
@@ -124,7 +124,7 @@
                                         <!-- Avatar preview -->
                                         <div class="avatar avatar-xl">
                                             <img class="avatar-img rounded-circle border border-white border-3 shadow"
-                                                src="blogzine/03.jpg" alt="">
+                                                src="{{ Auth::user()->avatar }}" alt="">
                                         </div>
                                     </div>
                                     <!-- Avatar remove button -->

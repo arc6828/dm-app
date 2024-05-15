@@ -403,7 +403,7 @@
                             <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
                                 data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img class="avatar-img rounded-circle" src="blogzine/03.jpg" alt="avatar">
+                                <img class="avatar-img rounded-circle" src="{{ Auth::user()->avatar }}" alt="avatar">
                             </a>
 
                             <!-- Profile dropdown START -->
@@ -414,7 +414,7 @@
                                     <div class="d-flex align-items-center">
                                         <!-- Avatar -->
                                         <div class="avatar me-3">
-                                            <img class="avatar-img rounded-circle shadow" src="blogzine/03.jpg"
+                                            <img class="avatar-img rounded-circle shadow" src="{{ Auth::user()->avatar }}"
                                                 alt="avatar">
                                         </div>
                                         <div>

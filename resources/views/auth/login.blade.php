@@ -39,17 +39,23 @@
                         <!-- Form END -->
                         <hr>
                         <!-- Social-media btn -->
-                        <div class="text-center d-none">
-                            <p>Sign in with your social network for quick access</p>
+                        <div class="text-center">
+                            <p>ลงชื่อเข้าใช้ด้วยเครือข่ายโซเชียลของคุณเพื่อการเข้าถึงที่รวดเร็ว</p>
                             <ul class="list-unstyled d-sm-flex mt-3 justify-content-center">
                                 <li class="mx-2">
+                                    <a href="#" class="btn d-inline-block text-white fs-6" style="background-color: #00B900;">
+                                        <img src="{{ asset('/img/Line.png') }}" alt="line" style="height:30px;" border="0"> 
+                                        ลงชื่อเข้าใช้ด้วย Line
+                                    </a>
+                                </li>
+                                {{-- <li class="mx-2">
                                     <a href="#" class="btn bg-facebook d-inline-block"><i
                                             class="fab fa-facebook-f me-2"></i> Sign in with Facebook</a>
                                 </li>
                                 <li class="mx-2">
                                     <a href="#" class="btn bg-google d-inline-block"><i
                                             class="fab fa-google me-2"></i> Sign in with google</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>

@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,4 +97,26 @@ Route::get('/watch/{slug}', function($slug){
     });
 
     return view("post-watch", compact("post","relates"));
+});
+
+Route::get('/auth/line/redirect', function () {
+    return Socialite::driver('line')->redirect();
+});
+ 
+Route::get('/auth/line/callback', function () {
+    $user = Socialite::driver('line')->user();
+ 
+    // $user->token
+    $user = User::updateOrCreate([
+        'github_id' => $user->id,
+    ], [
+        'name' => $user->name,
+        'email' => $user->email,
+        'github_token' => $user->token,
+        'github_refresh_token' => $user->refreshToken,
+    ]);
+ 
+    Auth::login($user);
+ 
+    return redirect('/dashboard');
 });
