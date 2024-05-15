@@ -43,7 +43,7 @@
                             <p>ลงชื่อเข้าใช้ด้วยเครือข่ายโซเชียลของคุณเพื่อการเข้าถึงที่รวดเร็ว</p>
                             <ul class="list-unstyled d-sm-flex mt-3 justify-content-center">
                                 <li class="mx-2">
-                                    <a href="#" class="btn d-inline-block text-white fs-6" style="background-color: #00B900;">
+                                    <a href="{{ url('auth/line/redirect') }}" class="btn d-inline-block text-white fs-6" style="background-color: #00B900;">
                                         <img src="{{ asset('/img/Line.png') }}" alt="line" style="height:30px;" border="0"> 
                                         ลงชื่อเข้าใช้ด้วย Line
                                     </a>
