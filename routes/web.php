@@ -20,8 +20,8 @@ use Laravel\Socialite\Facades\Socialite;
 Route::get('/', function () {
     $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
     $items = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
-                   
-    return view('home-blog-classic', compact("posts","items"));
+
+    return view('home-blog-classic', compact("posts", "items"));
     // return view('home');
     // return view('welcome');
 });
@@ -32,7 +32,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/profile', function(){
+    Route::get('/profile', function () {
         return view("profile");
     })->name('profile.edit');
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -40,83 +40,84 @@ Route::middleware('auth')->group(function () {
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
-Route::get('/about', function(){
+Route::get('/about', function () {
     return view("about");
 });
-Route::get('/contact', function(){
+Route::get('/contact', function () {
     return view("contact");
 });
-Route::get('/knowledge', function(){
+Route::get('/knowledge', function () {
     $posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
-                   
+
     return view('knowledge', compact("posts"));
 });
 
-Route::get('/post/{slug}', function($slug){
+Route::get('/post/{slug}', function ($slug) {
     $all_posts = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/ckartisan/tagged/diabetes"))->channel->item;
     // "guid": "https://medium.com/p/8156e4fe87f0",
 
-    $posts = array_filter($all_posts, function($item) use ($slug){
-        $parts = explode("/",$item->guid);
+    $posts = array_filter($all_posts, function ($item) use ($slug) {
+        $parts = explode("/", $item->guid);
         $s = end($parts);
         return ($s == $slug);
     });
     $post = end($posts);
 
     // relates
-    $relates = array_filter($all_posts, function($item) use ($slug){
-        $parts = explode("/",$item->guid);
+    $relates = array_filter($all_posts, function ($item) use ($slug) {
+        $parts = explode("/", $item->guid);
         $s = end($parts);
         return ($s != $slug);
     });
 
-    return view("post", compact("post","relates"));
+    return view("post", compact("post", "relates"));
 });
 
-Route::get('/watch', function(){
+Route::get('/watch', function () {
     $items = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
-                   
+
     return view('watch', compact("items"));
 });
 
-Route::get('/watch/{slug}', function($slug){
+Route::get('/watch/{slug}', function ($slug) {
     $all_posts = json_decode(file_get_contents("https://raw.githubusercontent.com/arc6828/dm-app/main/public/json/youtube.json"))->items;
     // "guid": "https://medium.com/p/8156e4fe87f0",
 
-    $posts = array_filter($all_posts, function($item) use ($slug){
+    $posts = array_filter($all_posts, function ($item) use ($slug) {
         return ($item->id == $slug);
     });
     $post = end($posts);
 
     //relates
-    $relates = array_filter($all_posts, function($item) use ($slug){
+    $relates = array_filter($all_posts, function ($item) use ($slug) {
         return ($item->id != $slug);
     });
 
-    return view("post-watch", compact("post","relates"));
+    return view("post-watch", compact("post", "relates"));
 });
 
 Route::get('/auth/line/redirect', function () {
     return Socialite::driver('line')->redirect();
 });
- 
+
 Route::get('/auth/line/callback', function () {
-    $user = Socialite::driver('line')->user();
- 
+    $social_user = Socialite::driver('line')->user();
+
     // $user->token
     $user = User::updateOrCreate([
-        'github_id' => $user->id,
+        'provider_id' => $social_user->id,
     ], [
-        'name' => $user->name,
-        'email' => $user->email,
-        'github_token' => $user->token,
-        'github_refresh_token' => $user->refreshToken,
+        'name' => $social_user->name,
+        'email' => isset($social_user->email) ? $social_user->email : $social_user->id,
+        'avatar' => $social_user->avatar,
+        // 'github_token' => $social_user->token,
+        // 'github_refresh_token' => $social_user->refreshToken,
     ]);
- 
+
     Auth::login($user);
- 
+
     return redirect('/dashboard');
 });
