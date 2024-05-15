@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,6 +114,7 @@ Route::get('/auth/line/callback', function () {
         'name' => $social_user->name,
         'email' => isset($social_user->email) ? $social_user->email : $social_user->id,
         'avatar' => $social_user->avatar,
+        'password' => Str::password(16, true, true, false, false),
         // 'github_token' => $social_user->token,
         // 'github_refresh_token' => $social_user->refreshToken,
     ]);
