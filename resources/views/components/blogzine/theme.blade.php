@@ -96,6 +96,7 @@
         .navbar-brand .navbar-brand-item {
             height: 50px;
         }
+
         h1,
         h2,
         h3,
@@ -414,8 +415,8 @@
                                     <div class="d-flex align-items-center">
                                         <!-- Avatar -->
                                         <div class="avatar me-3">
-                                            <img class="avatar-img rounded-circle shadow" src="{{ Auth::user()->avatar }}"
-                                                alt="avatar">
+                                            <img class="avatar-img rounded-circle shadow"
+                                                src="{{ Auth::user()->avatar }}" alt="avatar">
                                         </div>
                                         <div>
                                             <a class="h6 mt-2 mt-sm-0" href="#"> {{ Auth::user()->name }}</a>
@@ -426,7 +427,8 @@
                                 </li>
                                 <!-- Links -->
                                 <li>
-                                    <a class="dropdown-item" href="{{ url('profile') }}"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
+                                    <a class="dropdown-item" href="{{ url('profile') }}"><i
+                                            class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
                                 </li>
                                 {{-- <li>
                                     <a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
@@ -439,9 +441,6 @@
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
-
-
-
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); this.closest('form').submit();">
                                             <i class="bi bi-power fa-fw me-2"></i>Sign Out
@@ -521,13 +520,16 @@ Header END -->
                 <div class="col-md-6 col-lg-3 mb-4">
                     <img class="light-mode-item" src="{{ asset('img/dmapplication.png') }}" alt="logo">
                     <img class="dark-mode-item" src="{{ asset('img/dmapplication.png') }}" alt="logo">
-                    <p class="mt-3">DM Application สร้างขึ้นมาเพื่อใช้เป็นช่องทางการเข้าถึงข้อมูลสุขภาพและบริการสุขภาพที่ทันสมัยในการดูแลสุขภาพตนเองของผู้ป่วยเบาหวานชนิดที่ 2</p>
-                    
+                    <p class="mt-3">
+                        DM Application
+                        สร้างขึ้นมาเพื่อใช้เป็นช่องทางการเข้าถึงข้อมูลสุขภาพและบริการสุขภาพที่ทันสมัยในการดูแลสุขภาพตนเองของผู้ป่วยเบาหวานชนิดที่
+                        2
+                    </p>
                 </div>
 
                 <!-- Footer Widget -->
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="mb-4">Navigation</h5>
+                    <h5 class="mb-4">เมนูหลัก</h5>
                     <div class="row">
                         <div class="col-6">
                             <ul class="nav flex-column">
@@ -536,7 +538,10 @@ Header END -->
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link pt-0" href="{{ url('/knowledge') }}">คลังความรู้</a>
-                                </li>                                
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="{{ url('/watch') }}">คลังวีดิโอ</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-6">
@@ -547,7 +552,7 @@ Header END -->
                                 <li class="nav-item">
                                     <a class="nav-link pt-0" href="{{ url('/contact') }}">ติดต่อเรา</a>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         {{-- <div class="col-6">
@@ -584,12 +589,16 @@ Header END -->
 
                 <!-- Footer Widget -->
                 <div class="col-sm-6 col-lg-3 mb-4">
-                    <h5 class="mb-4">Browse by Tag</h5>
+                    <h5 class="mb-4">แท็กสำคัญ</h5>
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
-                                class="btn btn-sm btn-primary-soft">Diabetes</a></li>
-                        <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
-                                class="btn btn-sm btn-warning-soft">Health</a></li>
+                        <li class="list-inline-item">
+                            <a href="{{ url('knowledge') }}?tag=Diabetes"
+                                class="btn btn-sm btn-primary-soft">Diabetes</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{{ url('knowledge') }}?tag=Health"
+                                class="btn btn-sm btn-warning-soft">Health</a>
+                        </li>
                         {{-- <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
                                 class="btn btn-sm btn-success-soft">Tech</a></li>
                         <li class="list-inline-item"><a href="https://blogzine.webestica.com/about-us.html#"
@@ -611,13 +620,15 @@ Header END -->
 
                 <!-- Footer Widget -->
                 <div class="col-sm-6 col-lg-2 mb-4">
-                    <h5 class="mb-4">Social</h5>
-                    <ul class="nav flex-column">         
+                    <h5 class="mb-4">เพิ่มเพื่อน-แชท</h5>
+                    <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="https://lin.ee/WoFBOIo" class="btn btn-sucsess" style="background-color: #00B900;">
-                                <img src="{{ asset('img/Line.png') }}" alt="เพิ่มเพื่อน-แชท" style="height:30px;" border="0">
+                            <a href="https://lin.ee/WoFBOIo" class="btn btn-sucsess"
+                                style="background-color: #00B900;">
+                                <img src="{{ asset('img/Line.png') }}" alt="เพิ่มเพื่อน-แชท" style="height:30px;"
+                                    border="0">
                                 <span class="text-white fs-6">เพิ่มเพื่อน/แชท</span>
-                            </a>                            
+                            </a>
                         </li>
                         {{-- <li class="nav-item"><a class="nav-link"
                                 href="https://blogzine.webestica.com/about-us.html#"><i
@@ -636,8 +647,8 @@ Header END -->
             <div class="row">
                 <!-- Footer Widget -->
                 <div class="col-12 mb-4">
-                    <div class="text-center">©{{ date("Y") }} <a href="https://www.dmapplication.com" class="text-reset btn-link"
-                            target="_blank">DMApplication</a>. All rights reserved
+                    <div class="text-center">©{{ date('Y') }} <a href="{{ url('/') }}"
+                            class="text-reset btn-link" target="_blank">dmapplication.com</a>. All rights reserved
                     </div>
                 </div>
             </div>
