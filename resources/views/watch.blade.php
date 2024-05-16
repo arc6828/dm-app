@@ -30,24 +30,23 @@
                 @foreach ($items as $index => $item)
                     <!-- Card item START -->
                     <div class="col-sm-6 col-lg-3">
-                        <div class="card mb-4">
+                        <div class="card mb-4 h-100">
                             <!-- Card img -->
                             <div class="card-fold position-relative">
                                 <img class="card-img" src="{{ $item->snippet->thumbnails->medium->url }}" alt="Card image">
                             </div>
                             <div class="card-body px-0 pt-3">
-                                <h5 class="card-title">
-                                    <a href="{{ url('watch/'.$item->id) }}" class="btn-link text-reset stretched-link fw-bold">{{ $item->snippet->title }}</a>
-                                </h5>
-                                <!-- Card info -->
+                                <h5 class="card-title" style="min-height: 2.5px" >
+                                    <a href="{{ url('watch/'.$item->id) }}" class="btn-link text-reset stretched-link fw-bold">{{ mb_substr($item->snippet->title,0,56) }}</a>
+                                </h5>     
                                 <ul class="nav nav-divider align-items-center text-uppercase small">
                                     <li class="nav-item">
                                         <a href="#{{ $item->snippet->videoOwnerChannelId  }}" class="nav-link text-reset btn-link">{{ mb_substr($item->snippet->videoOwnerChannelTitle,0,20)  }}</a>
                                     </li>
                                     <li class="nav-item">{{ date("M d, Y",strtotime($item->snippet->publishedAt)) }}</li>
                                     {{-- <li class="nav-item">Mar 07, 2022</li> --}}
-                                </ul>
-                            </div>
+                                </ul>                                
+                            </div>                          
                         </div>
                     </div>
                     <!-- Card item END -->
