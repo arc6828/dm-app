@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Str;
+use Laravel\Socialite\Two\InvalidStateException;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,7 +106,14 @@ Route::get('/auth/line/redirect', function () {
 });
 
 Route::get('/auth/line/callback', function () {
-    $social_user = Socialite::driver('line')->user();
+    
+    try {
+        // $socialite = Socialite::driver($provider)->user();
+        $social_user = Socialite::driver('line')->user();
+    } catch (InvalidStateException $e) {        
+        // $socialite = Socialite::driver($provider)->stateless()->user();
+        $social_user = Socialite::driver('line')->stateless()->user();
+    }
 
     // $user->token
     $user = User::updateOrCreate([
