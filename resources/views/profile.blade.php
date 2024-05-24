@@ -89,86 +89,106 @@
                 <!-- Left sidebar START -->
                 <div class="col-lg-7 col-xxl-8">
                     <!-- Profile START -->
-                    <div class="card border mb-4">
-                        <div class="card-header border-bottom p-3">
-                            <h5 class="card-header-title mb-0">โปรไฟล์ผู้ใช้งาน</h5>
-                        </div>
-                        <div class="card-body">
-                            <!-- Full name -->
-                            <div class="mb-3">
-                                <label class="form-label">ชื่อ - นามสกุล</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" value="{{ Auth::user()->name }}"
-                                        placeholder="name">
-                                </div>
+                    <form method="post" action="{{ route('profile.update') }}"  >
+                        @csrf
+                        @method('PATCH')
+                        <div class="card border mb-4">
+                            <div class="card-header border-bottom p-3">
+                                <h5 class="card-header-title mb-0">โปรไฟล์ผู้ใช้งาน</h5>
                             </div>
-                            <!-- Username -->
-                            <div class="mb-3 d-none">
-                                <label class="form-label">Username</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">webestica.com</span>
-                                    <input type="text" class="form-control" value="louisferguson">
-                                </div>
-                            </div>
-                            <!-- Profile picture -->
-                            <div class="mb-3">
-                                <label class="form-label">Profile picture</label>
-                                <!-- Avatar upload START -->
-                                <div class="d-flex align-items-center">
-                                    <div class="position-relative me-3">
-                                        <!-- Avatar edit -->
-                                        <div class="position-absolute top-0 end-0  z-index-9">
-                                            <a class="btn btn-sm btn-light btn-round mb-0 mt-n1 me-n1" href="#">
-                                                <i class="bi bi-pencil"></i> </a>
-                                        </div>
-                                        <!-- Avatar preview -->
-                                        <div class="avatar avatar-xl">
-                                            <img class="avatar-img rounded-circle border border-white border-3 shadow"
-                                                src="{{ Auth::user()->avatar }}" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- Avatar remove button -->
-                                    <div class="avatar-remove">
-                                        <button type="button" class="btn btn-light">Delete</button>
+                            <div class="card-body">
+                                <!-- Full name -->
+                                <div class="mb-3">
+                                    <label class="form-label">ชื่อ - นามสกุล</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="name" id="name" value="{{ Auth::user()->name }}"
+                                            placeholder="name">
                                     </div>
                                 </div>
-                                <!-- Avatar upload END -->
-                            </div>
-                            <!-- Sex -->
-                            <div class="mb-3">
-                                <label class="form-label">เพศ</label>
-                                <input class="form-control" type="text" value="ชาย">
-                            </div>
-                            <!-- dm-type -->
-                            <div class="mb-3">
-                                <label class="form-label">ประเภทเบาหวานที่เป็น</label>
-                                <input class="form-control" type="text" value="เบาหวานประเภทที่ 2">
-                            </div>
-                            <!-- drug_allery -->
-                            <div class="mb-3">
-                                <label class="form-label">แพ้ยา</label>
-                                <textarea class="form-control" rows="3">แพ้ยา ... </textarea>
-                                <div class="form-text">โปรดระบุอย่างละเอียด</div>
-                            </div>
-                            <!-- drug -->
-                            <div class="mb-3">
-                                <label class="form-label">ยาที่ใช้</label>
-                                <textarea class="form-control" rows="3">ยาที่ใช้ ... </textarea>
-                                <div class="form-text">โปรดระบุอย่างละเอียด</div>
-                            </div>
-                            <!-- Birthday -->
-                            <div>
-                                <label class="form-label">วันเกิด</label>
-                                <input type="date" class="form-control flatpickr-input" placeholder="DD/MM/YYYY"
-                                    value="2000-01-31">
-                            </div>
-                            <!-- Save button -->
-                            <div class="d-flex justify-content-end mt-4">
-                                <a href="#" class="btn text-secondary border-0 me-2">Discard</a>
-                                <a href="#" class="btn btn-primary">Save changes</a>
+                                <!-- Username -->
+                                <div class="mb-3 d-none">
+                                    <label class="form-label">Username</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">webestica.com</span>
+                                        <input type="text" class="form-control" value="louisferguson">
+                                    </div>
+                                </div>
+                                <!-- Profile picture -->
+                                <div class="mb-3">
+                                    <label class="form-label">รูปโปรไฟล์</label>
+                                    <!-- Avatar upload START -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="position-relative me-3">
+                                            <!-- Avatar edit -->
+                                            <div class="position-absolute top-0 end-0  z-index-9">
+                                                <a class="btn btn-sm btn-light btn-round mb-0 mt-n1 me-n1" href="#">
+                                                    <i class="bi bi-pencil"></i> </a>
+                                            </div>
+                                            <!-- Avatar preview -->
+                                            <div class="avatar avatar-xl">
+                                                <img class="avatar-img rounded-circle border border-white border-3 shadow"
+                                                    src="{{ Auth::user()->avatar }}" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Avatar remove button -->
+                                        <div class="avatar-remove">
+                                            <button type="button" class="btn btn-light">Delete</button>
+                                        </div>
+                                    </div>
+                                    <!-- Avatar upload END -->
+                                </div>
+                                <!-- Sex -->
+                                <div class="mb-3">
+                                    <label class="form-label">เพศ</label>
+                                    {{-- <input class="form-control" type="text" value="ชาย"> --}}
+                                    <select class="form-select" name="sex" id="sex" >
+                                        <option value="" selected>ระบุเพศ ...</option>
+                                        <option value="ชาย">ชาย</option>
+                                        <option value="หญิง">หญิง</option>
+                                    </select>
+                                    <script>
+                                        document.querySelector("#sex").value = "{{ Auth::user()->patient->sex }}";
+                                    </script>
+                                </div>
+                                <!-- dm-type -->
+                                <div class="mb-3">
+                                    <label class="form-label">ประเภทเบาหวานที่เป็น</label>
+                                    {{-- <input class="form-control" type="text" value="เบาหวานประเภทที่ 2"> --}}
+                                    <select class="form-select" name="dm_type" id="dm_type" >
+                                        <option value="" selected>ระบุประเภทเบาหวาน ...</option>
+                                        <option value="เบาหวานประเภทที่ 1">เบาหวานประเภทที่ 1</option>
+                                        <option value="เบาหวานประเภทที่ 2">เบาหวานประเภทที่ 2</option>
+                                        <option value="เบาหวานขณะตั้งครรภ์">เบาหวานขณะตั้งครรภ์</option>
+                                    </select>
+                                    <script>
+                                        document.querySelector("#dm_type").value = "{{ Auth::user()->patient->dm_type }}";
+                                    </script>
+                                </div>
+                                <!-- drug_allery -->
+                                <div class="mb-3">
+                                    <label class="form-label">แพ้ยา</label>
+                                    <textarea class="form-control" rows="3" name="drug_allergy" id="drug_allergy" placeholder="แพ้ยา ...">{{ Auth::user()->patient->drug_allergy }}</textarea>
+                                    <div class="form-text">โปรดระบุอย่างละเอียด (ถ้ามี)</div>
+                                </div>
+                                <!-- drug -->
+                                <div class="mb-3">
+                                    <label class="form-label">ยาที่ใช้</label>
+                                    <textarea class="form-control" rows="3" name="drug" id="drug" placeholder="ยาที่ใช้ ...">{{ Auth::user()->patient->drug }}</textarea>
+                                    <div class="form-text">โปรดระบุอย่างละเอียด (ถ้ามี)</div>
+                                </div>
+                                <!-- Birthday -->
+                                <div>
+                                    <label class="form-label">วันเกิด</label>
+                                    <input type="date" class="form-control flatpickr-input" placeholder="DD/MM/YYYY" name="date_of_birth" id="date_of_birth" value="{{ Auth::user()->patient->date_of_birth }}">
+                                </div>
+                                <!-- Save button -->
+                                <div class="d-flex justify-content-end mt-4">
+                                    <a href="#" class="btn text-secondary border-0 me-2">Discard</a>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                     <!-- Profile END -->
 
                     <!-- Personal information START -->

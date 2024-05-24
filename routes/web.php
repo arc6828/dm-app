@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\Patient;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,10 +33,37 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
 
     Route::get('/profile', function () {
+        $user = Auth::user();
+        if(!isset($user->patient)){
+            Patient::create([
+                'code' => '',
+                'sex' => '',
+                'date_of_birth' => date("Y-m-d"),
+                'dm_type' => '',
+                'drug_allergy' => '',
+                'drug' => '',
+                'user_id' => $user->id,
+            ]);
+        }
         return view("profile");
     })->name('profile.edit');
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    
+    Route::patch('/profile', function(Request $request){
+        $data = $request->all();
+        $id = Auth::user()->id;
+        $patient = Patient::findOrFail($id);
+        $patient->update($data);
+
+        $user = User::findOrFail($id);
+        $user->update(["name"=>$data['name']]);
+
+        
+
+        return redirect()->route('profile.edit');
+
+    })->name('profile.update');
+
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
