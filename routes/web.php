@@ -44,6 +44,8 @@ Route::middleware('auth')->group(function () {
                 'drug' => '',
                 'user_id' => $user->id,
             ]);
+            $user = Auth::user();
+            sleep(1);
         }
         return view("profile");
     })->name('profile.edit');
