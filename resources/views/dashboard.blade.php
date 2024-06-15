@@ -795,8 +795,9 @@
                                     <span
                                         class="badge bg-primary bg-opacity-10 text-primary">{{ Auth::user()->name }}</span>
                                 </h5>
-                                <a href="{{ route("appoint.create") }}" class="btn btn-sm btn-primary mb-0">เพิ่มนัด</a>
-                                
+                                <a href="{{ route('appoint.create') }}"
+                                    class="btn btn-sm btn-primary mb-0">เพิ่มนัด</a>
+
                             </div>
                         </div>
                         <!-- Card header END -->
@@ -804,7 +805,7 @@
                         <!-- Card body START -->
                         <div class="card-body">
                             <div id='calendar'></div>
-                            
+
                             <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
                             <script>
                                 document.addEventListener('DOMContentLoaded', function() {
@@ -815,13 +816,15 @@
                                             //{ title: 'นัดครั้งที่ 1', start: '2024-05-01' },
                                             //{ title: 'นัดครั้งที่ 2', start: '2024-05-05', end: '2010-01-07' },
                                             //{ title: 'นัดครั้งที่ 3', start: '2024-05-09T12:30:00', allDay: false }
-                                            @foreach($appointments as $item)
-                                            {
-                                                title: '{{ "นัด" }} {{ $item->patient->user->name }}',
-                                                start: '{{ $item->appointment_date }}'
-                                            },
-                                            @endforeach                                           
-                                        ]
+                                            @foreach ($appointments as $item)
+                                                {
+                                                    title: '{{ 'นัด' }} {{ $item->patient->user->name }}',
+                                                    start: '{{ $item->appointment_date }}',
+                                                    url : '{{ route("appoint.edit",["appoint"=>$item->id]) }}',
+                                                },
+                                            @endforeach
+                                        ],
+                                        
                                     });
                                     calendar.render();
                                 });
