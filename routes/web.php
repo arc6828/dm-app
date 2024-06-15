@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
+use App\Models\Appointment;
 use App\Models\Patient;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,14 +29,15 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $appointments = Appointment::where('patient_id',Auth::user()->patient->id)->get();
+    return view('dashboard', compact('appointments'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
 
     Route::get('/profile', function () {
         $user = Auth::user();
-        if(!isset($user->patient)){
+        if (!isset($user->patient)) {
             Patient::create([
                 'code' => '',
                 'sex' => '',
@@ -49,21 +52,20 @@ Route::middleware('auth')->group(function () {
         return view("profile");
     })->name('profile.edit');
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    
-    Route::patch('/profile', function(Request $request){
+
+    Route::patch('/profile', function (Request $request) {
         $data = $request->all();
-        $id = Auth::user()->id;
-        $patient = Patient::findOrFail($id);
+        $user_id = Auth::user()->id;
+        $patient = Patient::where('user_id', $user_id)->firstOrFail();
         $patient->update($data);
 
-        $user = User::findOrFail($id);
-        $user->update(["name"=>$data['name']]);
-
-        
+        $user = User::findOrFail($user_id);
+        $user->update(["name" => $data['name']]);
 
         return redirect()->route('profile.edit');
-
     })->name('profile.update');
+
+    Route::resource('appoint', AppointmentController::class );
 
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
@@ -127,4 +129,3 @@ Route::get('/watch/{slug}', function ($slug) {
 
     return view("post-watch", compact("post", "relates"));
 });
-

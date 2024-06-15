@@ -114,35 +114,37 @@
                         <!-- Card header -->
                         <div class="card-header border-bottom p-3">
                             <h5 class="card-header-title mb-0">รายละเอียดระดับน้ำตาลในเลือด</h5>
-                        </div>                        
+                        </div>
 
                         <!-- Card body START -->
                         <div class="card-body p-3">
 
                             <div class="row">
                                 @php
-                                $blood_sugar_list = [
-                                    (object)["level"=>80, "created_at"=>"May 15, 2024"],
-                                    (object)["level"=>90, "created_at"=>"May 16, 2024"],
-                                    (object)["level"=>100, "created_at"=>"May 17, 2024"],
-                                    (object)["level"=>100, "created_at"=>"May 18, 2024"],
-                                ];
+                                    $blood_sugar_list = [
+                                        (object) ['level' => 80, 'created_at' => 'May 15, 2024'],
+                                        (object) ['level' => 90, 'created_at' => 'May 16, 2024'],
+                                        (object) ['level' => 100, 'created_at' => 'May 17, 2024'],
+                                        (object) ['level' => 100, 'created_at' => 'May 18, 2024'],
+                                    ];
                                 @endphp
-                                @foreach($blood_sugar_list  as $item)
-                                <!-- Blog item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        {{-- <img class="w-60 rounded" src="blogzine/01.jpg" alt="product"> --}}
-                                        <div class="ms-3">                                            
-                                            <p class="small mb-0">{{ $item->created_at }}</p>
-                                            <a href="#" class="h6 stretched-link">{{ $item->level }} (mg/dl)</a>
+                                @foreach ($blood_sugar_list as $item)
+                                    <!-- Blog item -->
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center position-relative">
+                                            {{-- <img class="w-60 rounded" src="blogzine/01.jpg" alt="product"> --}}
+                                            <div class="ms-3">
+                                                <p class="small mb-0">{{ $item->created_at }}</p>
+                                                <a href="#" class="h6 stretched-link">{{ $item->level }}
+                                                    (mg/dl)
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                @if(! $loop->last)
-                                <!-- Divider -->
-                                <hr class="my-3">
-                                @endif
+                                    @if (!$loop->last)
+                                        <!-- Divider -->
+                                        <hr class="my-3">
+                                    @endif
                                 @endforeach
 
                             </div>
@@ -157,265 +159,274 @@
                     </div>
                     <!-- Detail Sugar Blood END -->
                 </div>
-                @if(false)
-                <div class="col-md-6 col-xxl-4">
-                    <!-- Recent comment START -->
-                    <div class="card border h-100">
-                        <!-- Card header -->
-                        <div class="card-header border-bottom p-3">
-                            <h5 class="card-header-title mb-0">Recent comments</h5>
-                        </div>
+                @if (false)
+                    <div class="col-md-6 col-xxl-4">
+                        <!-- Recent comment START -->
+                        <div class="card border h-100">
+                            <!-- Card header -->
+                            <div class="card-header border-bottom p-3">
+                                <h5 class="card-header-title mb-0">Recent comments</h5>
+                            </div>
 
-                        <!-- Card body START -->
-                        <div class="card-body p-3">
+                            <!-- Card body START -->
+                            <div class="card-body p-3">
 
-                            <div class="row">
-                                <!-- Comment item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-lg flex-shrink-0">
-                                            <img class="avatar-img rounded-2" src="assets/images/avatar/06.jpg"
-                                                alt="avatar">
-                                        </div>
-                                        <!-- Info -->
-                                        <div class="ms-3">
-                                            <p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#">
-                                                    Supposing so be resolving breakfast am or perfectly.. </a></p>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="small mb-0">by Joan</p>
+                                <div class="row">
+                                    <!-- Comment item -->
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center position-relative">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-lg flex-shrink-0">
+                                                <img class="avatar-img rounded-2" src="assets/images/avatar/06.jpg"
+                                                    alt="avatar">
+                                            </div>
+                                            <!-- Info -->
+                                            <div class="ms-3">
+                                                <p class="mb-1"> <a class="h6 fw-normal stretched-link"
+                                                        href="#">
+                                                        Supposing so be resolving breakfast am or perfectly.. </a></p>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="small mb-0">by Joan</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Divider -->
-                                <hr class="my-3">
+                                    <!-- Divider -->
+                                    <hr class="my-3">
 
-                                <!-- Comment item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-lg flex-shrink-0">
-                                            <img class="avatar-img rounded-2" src="assets/images/avatar/08.jpg"
-                                                alt="avatar">
-                                        </div>
-                                        <!-- Info -->
-                                        <div class="ms-3">
-                                            <p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#">
-                                                    We focus a great deal on the understanding of behavioral.. </a></p>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="small mb-0">by Allen Smith</p>
+                                    <!-- Comment item -->
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center position-relative">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-lg flex-shrink-0">
+                                                <img class="avatar-img rounded-2" src="assets/images/avatar/08.jpg"
+                                                    alt="avatar">
+                                            </div>
+                                            <!-- Info -->
+                                            <div class="ms-3">
+                                                <p class="mb-1"> <a class="h6 fw-normal stretched-link"
+                                                        href="#">
+                                                        We focus a great deal on the understanding of behavioral.. </a>
+                                                </p>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="small mb-0">by Allen Smith</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Divider -->
-                                <hr class="my-3">
+                                    <!-- Divider -->
+                                    <hr class="my-3">
 
-                                <!-- Comment item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-lg flex-shrink-0">
-                                            <img class="avatar-img rounded-2" src="assets/images/avatar/04.jpg"
-                                                alt="avatar">
-                                        </div>
-                                        <!-- Info -->
-                                        <div class="ms-3">
-                                            <p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#">
-                                                    Supposing so be resolving breakfast am or perfectly.. </a></p>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="small mb-0">by Louis Ferguson</p>
+                                    <!-- Comment item -->
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center position-relative">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-lg flex-shrink-0">
+                                                <img class="avatar-img rounded-2" src="assets/images/avatar/04.jpg"
+                                                    alt="avatar">
+                                            </div>
+                                            <!-- Info -->
+                                            <div class="ms-3">
+                                                <p class="mb-1"> <a class="h6 fw-normal stretched-link"
+                                                        href="#">
+                                                        Supposing so be resolving breakfast am or perfectly.. </a></p>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="small mb-0">by Louis Ferguson</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Divider -->
-                                <hr class="my-3">
+                                    <!-- Divider -->
+                                    <hr class="my-3">
 
-                                <!-- Comment item -->
-                                <div class="col-12">
-                                    <div class="d-flex align-items-center position-relative">
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-lg flex-shrink-0">
-                                            <img class="avatar-img rounded-2" src="assets/images/avatar/05.jpg"
-                                                alt="avatar">
-                                        </div>
-                                        <!-- Info -->
-                                        <div class="ms-3">
-                                            <p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#">
-                                                    Supposing so be resolving breakfast am or perfectly.. </a></p>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="small mb-0">by Joan Wallace</p>
+                                    <!-- Comment item -->
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center position-relative">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-lg flex-shrink-0">
+                                                <img class="avatar-img rounded-2" src="assets/images/avatar/05.jpg"
+                                                    alt="avatar">
+                                            </div>
+                                            <!-- Info -->
+                                            <div class="ms-3">
+                                                <p class="mb-1"> <a class="h6 fw-normal stretched-link"
+                                                        href="#">
+                                                        Supposing so be resolving breakfast am or perfectly.. </a></p>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="small mb-0">by Joan Wallace</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Card body END -->
                         </div>
-                        <!-- Card body END -->
+                        <!-- Recent comment END -->
                     </div>
-                    <!-- Recent comment END -->
-                </div>
 
-                <div class="col-md-6 col-xxl-4">
-                    <!-- Notice board START -->
-                    <div class="card border h-100">
-                        <!-- Card header -->
-                        <div class="card-header border-bottom d-flex justify-content-between align-items-center  p-3">
-                            <h5 class="card-header-title mb-0">Notice board</h5>
-                            <!-- Dropdown button -->
-                            <div class="dropdown text-end">
-                                <a href="#" class="btn border-0 p-0 mb-0" role="button" id="dropdownShare3"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots fa-fw"></i>
-                                </a>
-                                <!-- dropdown button -->
-                                <ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded"
-                                    aria-labelledby="dropdownShare3">
-                                    <li><a class="dropdown-item" href="#"><i
-                                                class="bi bi-pencil-square fa-fw me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i
-                                                class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
+                    <div class="col-md-6 col-xxl-4">
+                        <!-- Notice board START -->
+                        <div class="card border h-100">
+                            <!-- Card header -->
+                            <div
+                                class="card-header border-bottom d-flex justify-content-between align-items-center  p-3">
+                                <h5 class="card-header-title mb-0">Notice board</h5>
+                                <!-- Dropdown button -->
+                                <div class="dropdown text-end">
+                                    <a href="#" class="btn border-0 p-0 mb-0" role="button"
+                                        id="dropdownShare3" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots fa-fw"></i>
+                                    </a>
+                                    <!-- dropdown button -->
+                                    <ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded"
+                                        aria-labelledby="dropdownShare3">
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="bi bi-pencil-square fa-fw me-2"></i>Edit</a></li>
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Card body START -->
+                            <div class="card-body p-3">
+                                <div class="custom-scrollbar h-350">
+                                    <div class="row">
+                                        <!-- Notice board item -->
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between position-relative">
+                                                <div class="d-sm-flex">
+                                                    <div
+                                                        class="icon-lg bg-warning bg-opacity-15 text-warning rounded-2 flex-shrink-0">
+                                                        <i class="fas fa-user-tie fs-5"></i>
+                                                    </div>
+                                                    <!-- Info -->
+                                                    <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+                                                        <h6 class="mb-0"><a href="#"
+                                                                class="stretched-link">Join
+                                                                New Author</a></h6>
+                                                        <p class="mb-0">Amongst moments do in arrived Fat weddings
+                                                            believed prospect</p>
+                                                        <span class="small">5 min ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Divider -->
+                                        <hr class="my-3">
+
+                                        <!-- Notice board item -->
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between position-relative">
+                                                <div class="d-sm-flex">
+                                                    <div
+                                                        class="icon-lg bg-success bg-opacity-10 text-success rounded-2 flex-shrink-0">
+                                                        <i class="bi bi-chat-left-quote-fill fs-5"></i>
+                                                    </div>
+                                                    <!-- Info -->
+                                                    <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+                                                        <h6 class="mb-0"><a href="#"
+                                                                class="stretched-link">Add 5
+                                                                New Blogs</a></h6>
+                                                        <p class="mb-0">Arrived Fat weddings believed prospect</p>
+                                                        <span class="small">4 hour ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Divider -->
+                                        <hr class="my-3">
+
+                                        <!-- Notice board item -->
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between position-relative">
+                                                <div class="d-sm-flex">
+                                                    <div
+                                                        class="icon-lg bg-danger bg-opacity-10 text-danger rounded-2 flex-shrink-0">
+                                                        <i class="bi bi-bell-fill fs-5"></i>
+                                                    </div>
+                                                    <!-- Info -->
+                                                    <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+                                                        <h6 class="mb-0"><a href="#" class="stretched-link">5
+                                                                New
+                                                                Subscribers</a></h6>
+                                                        <p class="mb-0">Weddings believed prospect Arrived</p>
+                                                        <span class="small">4 hour ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Divider -->
+                                        <hr class="my-3">
+
+                                        <!-- Notice board item -->
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between position-relative">
+                                                <div class="d-sm-flex">
+                                                    <div
+                                                        class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2 flex-shrink-0">
+                                                        <i class="fas fa-globe fs-5"></i>
+                                                    </div>
+                                                    <!-- Info -->
+                                                    <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+                                                        <h6 class="mb-0"><a href="#"
+                                                                class="stretched-link">Update New Feature</a></h6>
+                                                        <span class="small">3 days ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- Row END -->
+                                </div>
+                            </div>
+                            <!-- Card body END -->
+
+                            <!-- Card footer -->
+                            <div class="card-footer border-top text-center p-3">
+                                <a href="#">View all Notice List</a>
+                            </div>
+
+                        </div>
+                        <!-- Notice board END -->
+                    </div>
+
+                    <div class="col-md-6 col-xxl-4">
+                        <div class="card border h-100">
+
+                            <!-- Card header -->
+                            <div
+                                class="card-header border-bottom d-flex justify-content-between align-items-center p-3">
+                                <h5 class="card-header-title mb-0">Traffic sources</h5>
+                                <a href="#" class="btn btn-sm btn-link p-0 mb-0 text-reset">View all</a>
+                            </div>
+
+                            <!-- Card body START -->
+                            <div class="card-body p-4">
+                                <!-- Chart -->
+                                <div class=" mx-auto">
+                                    <div id="apexChartTrafficSources"></div>
+                                </div>
+                                <!-- Content -->
+                                <ul class="list-inline text-center mt-3">
+                                    <li class="list-inline-item pe-2"><i class="text-primary fas fa-circle pe-1"></i>
+                                        Search </li>
+                                    <li class="list-inline-item pe-2"><i class="text-success fas fa-circle pe-1"></i>
+                                        Direct </li>
+                                    <li class="list-inline-item pe-2"><i class="text-danger fas fa-circle pe-1"></i>
+                                        Social </li>
+                                    <li class="list-inline-item pe-2"><i class="text-warning fas fa-circle pe-1"></i>
+                                        Display ads </li>
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body p-3">
-                            <div class="custom-scrollbar h-350">
-                                <div class="row">
-                                    <!-- Notice board item -->
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between position-relative">
-                                            <div class="d-sm-flex">
-                                                <div
-                                                    class="icon-lg bg-warning bg-opacity-15 text-warning rounded-2 flex-shrink-0">
-                                                    <i class="fas fa-user-tie fs-5"></i>
-                                                </div>
-                                                <!-- Info -->
-                                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-                                                    <h6 class="mb-0"><a href="#" class="stretched-link">Join
-                                                            New Author</a></h6>
-                                                    <p class="mb-0">Amongst moments do in arrived Fat weddings
-                                                        believed prospect</p>
-                                                    <span class="small">5 min ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Divider -->
-                                    <hr class="my-3">
-
-                                    <!-- Notice board item -->
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between position-relative">
-                                            <div class="d-sm-flex">
-                                                <div
-                                                    class="icon-lg bg-success bg-opacity-10 text-success rounded-2 flex-shrink-0">
-                                                    <i class="bi bi-chat-left-quote-fill fs-5"></i>
-                                                </div>
-                                                <!-- Info -->
-                                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-                                                    <h6 class="mb-0"><a href="#" class="stretched-link">Add 5
-                                                            New Blogs</a></h6>
-                                                    <p class="mb-0">Arrived Fat weddings believed prospect</p>
-                                                    <span class="small">4 hour ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Divider -->
-                                    <hr class="my-3">
-
-                                    <!-- Notice board item -->
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between position-relative">
-                                            <div class="d-sm-flex">
-                                                <div
-                                                    class="icon-lg bg-danger bg-opacity-10 text-danger rounded-2 flex-shrink-0">
-                                                    <i class="bi bi-bell-fill fs-5"></i>
-                                                </div>
-                                                <!-- Info -->
-                                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-                                                    <h6 class="mb-0"><a href="#" class="stretched-link">5 New
-                                                            Subscribers</a></h6>
-                                                    <p class="mb-0">Weddings believed prospect Arrived</p>
-                                                    <span class="small">4 hour ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Divider -->
-                                    <hr class="my-3">
-
-                                    <!-- Notice board item -->
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between position-relative">
-                                            <div class="d-sm-flex">
-                                                <div
-                                                    class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2 flex-shrink-0">
-                                                    <i class="fas fa-globe fs-5"></i>
-                                                </div>
-                                                <!-- Info -->
-                                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-                                                    <h6 class="mb-0"><a href="#"
-                                                            class="stretched-link">Update New Feature</a></h6>
-                                                    <span class="small">3 days ago</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- Row END -->
-                            </div>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer -->
-                        <div class="card-footer border-top text-center p-3">
-                            <a href="#">View all Notice List</a>
-                        </div>
-
                     </div>
-                    <!-- Notice board END -->
-                </div>
-
-                <div class="col-md-6 col-xxl-4">
-                    <div class="card border h-100">
-
-                        <!-- Card header -->
-                        <div class="card-header border-bottom d-flex justify-content-between align-items-center p-3">
-                            <h5 class="card-header-title mb-0">Traffic sources</h5>
-                            <a href="#" class="btn btn-sm btn-link p-0 mb-0 text-reset">View all</a>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body p-4">
-                            <!-- Chart -->
-                            <div class=" mx-auto">
-                                <div id="apexChartTrafficSources"></div>
-                            </div>
-                            <!-- Content -->
-                            <ul class="list-inline text-center mt-3">
-                                <li class="list-inline-item pe-2"><i class="text-primary fas fa-circle pe-1"></i>
-                                    Search </li>
-                                <li class="list-inline-item pe-2"><i class="text-success fas fa-circle pe-1"></i>
-                                    Direct </li>
-                                <li class="list-inline-item pe-2"><i class="text-danger fas fa-circle pe-1"></i>
-                                    Social </li>
-                                <li class="list-inline-item pe-2"><i class="text-warning fas fa-circle pe-1"></i>
-                                    Display ads </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
                 @endif
 
                 <div class="col-12">
@@ -481,234 +492,262 @@
                                     <tbody class="border-top-0">
                                         @php
                                             $drug_usage_list = [
-                                                (object) ["name"=>"Drug A","dose"=>"100","time"=>"เช้า","before_after"=>"ก่อน","route"=>"ยากิน"],
-                                                (object) ["name"=>"Drug B","dose"=>"1000","time"=>"กลางวัน","before_after"=>"หลัง","route"=>"ยาฉีด"],
-                                                (object) ["name"=>"Drug C","dose"=>"10000","time"=>"เย็น","before_after"=>"ก่อน","route"=>"ยากิน"],
-                                                (object) ["name"=>"Drug D","dose"=>"1000","time"=>"เช้า","before_after"=>"หลัง","route"=>"ยาฉีด"],
+                                                (object) [
+                                                    'name' => 'Drug A',
+                                                    'dose' => '100',
+                                                    'time' => 'เช้า',
+                                                    'before_after' => 'ก่อน',
+                                                    'route' => 'ยากิน',
+                                                ],
+                                                (object) [
+                                                    'name' => 'Drug B',
+                                                    'dose' => '1000',
+                                                    'time' => 'กลางวัน',
+                                                    'before_after' => 'หลัง',
+                                                    'route' => 'ยาฉีด',
+                                                ],
+                                                (object) [
+                                                    'name' => 'Drug C',
+                                                    'dose' => '10000',
+                                                    'time' => 'เย็น',
+                                                    'before_after' => 'ก่อน',
+                                                    'route' => 'ยากิน',
+                                                ],
+                                                (object) [
+                                                    'name' => 'Drug D',
+                                                    'dose' => '1000',
+                                                    'time' => 'เช้า',
+                                                    'before_after' => 'หลัง',
+                                                    'route' => 'ยาฉีด',
+                                                ],
                                             ];
                                         @endphp
                                         <!-- Table item -->
-                                        @foreach($drug_usage_list as $item)
-                                        <tr>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">{{ $item->name }}</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="mb-0"><a href="#">{{ $item->dose }}</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <a href="#" class="badge text-bg-warning mb-2">
-                                                    <i class="fas fa-circle me-2 small fw-bold"></i>{{ $item->before_after }}อาหาร
-                                                </a>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <span
-                                                    class="badge bg-success bg-opacity-10 text-success mb-2">{{ $item->time }}</span>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <div class="d-flex gap-2">
-                                                    <a href="#" class="btn btn-light btn-round mb-0"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Delete"><i class="bi bi-trash"></i></a>
-                                                    <a href="dashboard-post-edit.html"
-                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Edit"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        @foreach ($drug_usage_list as $item)
+                                            <tr>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="course-title mt-2 mt-md-0 mb-0"><a
+                                                            href="#">{{ $item->name }}</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="mb-0"><a href="#">{{ $item->dose }}</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <a href="#" class="badge text-bg-warning mb-2">
+                                                        <i
+                                                            class="fas fa-circle me-2 small fw-bold"></i>{{ $item->before_after }}อาหาร
+                                                    </a>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <span
+                                                        class="badge bg-success bg-opacity-10 text-success mb-2">{{ $item->time }}</span>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="bi bi-trash"></i></a>
+                                                        <a href="dashboard-post-edit.html"
+                                                            class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         @endforeach
 
-                                        @if(false)
-                                        <!-- Table item -->
-                                        <tr>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Dirty
-                                                        little secrets about the business industry</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="mb-0"><a href="#">Dennis Barrett</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>Jan 19, 2022</td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <a href="#" class="badge text-bg-info mb-2"><i
-                                                        class="fas fa-circle me-2 small fw-bold"></i>Marketing</a>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <span
-                                                    class="badge bg-warning bg-opacity-15 text-warning mb-2">Draft</span>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <div class="d-flex gap-2">
-                                                    <a href="#" class="btn btn-light btn-round mb-0"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Delete"><i class="bi bi-trash"></i></a>
-                                                    <a href="dashboard-post-edit.html"
-                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Edit"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        @if (false)
+                                            <!-- Table item -->
+                                            <tr>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Dirty
+                                                            little secrets about the business industry</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="mb-0"><a href="#">Dennis Barrett</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>Jan 19, 2022</td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <a href="#" class="badge text-bg-info mb-2"><i
+                                                            class="fas fa-circle me-2 small fw-bold"></i>Marketing</a>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <span
+                                                        class="badge bg-warning bg-opacity-15 text-warning mb-2">Draft</span>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="bi bi-trash"></i></a>
+                                                        <a href="dashboard-post-edit.html"
+                                                            class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                        <!-- Table item -->
-                                        <tr>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">7 common
-                                                        mistakes everyone makes while traveling</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="mb-0"><a href="#">Billy Vasquez</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>Nov 11, 2022</td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <a href="#" class="badge text-bg-danger mb-2"><i
-                                                        class="fas fa-circle me-2 small fw-bold"></i>Photography</a>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <span
-                                                    class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <div class="d-flex gap-2">
-                                                    <a href="#" class="btn btn-light btn-round mb-0"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Delete"><i class="bi bi-trash"></i></a>
-                                                    <a href="dashboard-post-edit.html"
-                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Edit"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <!-- Table item -->
+                                            <tr>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">7
+                                                            common
+                                                            mistakes everyone makes while traveling</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="mb-0"><a href="#">Billy Vasquez</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>Nov 11, 2022</td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <a href="#" class="badge text-bg-danger mb-2"><i
+                                                            class="fas fa-circle me-2 small fw-bold"></i>Photography</a>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <span
+                                                        class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="bi bi-trash"></i></a>
+                                                        <a href="dashboard-post-edit.html"
+                                                            class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                        <!-- Table item -->
-                                        <tr>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">5
-                                                        investment doubts you should clarify</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="mb-0"><a href="#">Lori Stevens</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>Jan 22, 2022</td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <a href="#" class="badge text-bg-success mb-2"><i
-                                                        class="fas fa-circle me-2 small fw-bold"></i>Gadgets</a>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <span
-                                                    class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <div class="d-flex gap-2">
-                                                    <a href="#" class="btn btn-light btn-round mb-0"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Delete"><i class="bi bi-trash"></i></a>
-                                                    <a href="dashboard-post-edit.html"
-                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Edit"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <!-- Table item -->
+                                            <tr>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">5
+                                                            investment doubts you should clarify</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="mb-0"><a href="#">Lori Stevens</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>Jan 22, 2022</td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <a href="#" class="badge text-bg-success mb-2"><i
+                                                            class="fas fa-circle me-2 small fw-bold"></i>Gadgets</a>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <span
+                                                        class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="bi bi-trash"></i></a>
+                                                        <a href="dashboard-post-edit.html"
+                                                            class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                        <!-- Table item -->
-                                        <tr>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Bad
-                                                        habits that people in the industry need to quit</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="mb-0"><a href="#">Larry Lawson</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>Dec 06, 2022</td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <a href="#" class="badge bg-primary mb-2"><i
-                                                        class="fas fa-circle me-2 small fw-bold"></i>Sports</a>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <span
-                                                    class="badge bg-danger bg-opacity-10 text-danger mb-2">Removed</span>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <div class="d-flex gap-2">
-                                                    <a href="#" class="btn btn-light btn-round mb-0"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Delete"><i class="bi bi-trash"></i></a>
-                                                    <a href="dashboard-post-edit.html"
-                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Edit"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <!-- Table item -->
+                                            <tr>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Bad
+                                                            habits that people in the industry need to quit</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="mb-0"><a href="#">Larry Lawson</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>Dec 06, 2022</td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <a href="#" class="badge bg-primary mb-2"><i
+                                                            class="fas fa-circle me-2 small fw-bold"></i>Sports</a>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <span
+                                                        class="badge bg-danger bg-opacity-10 text-danger mb-2">Removed</span>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="bi bi-trash"></i></a>
+                                                        <a href="dashboard-post-edit.html"
+                                                            class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                        <!-- Table item -->
-                                        <tr>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Around
-                                                        the web: 20 fabulous infographics about business</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <h6 class="mb-0"><a href="#">Bryan Knight</a></h6>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>Feb 14, 2022</td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <a href="#" class="badge text-bg-danger mb-2"><i
-                                                        class="fas fa-circle me-2 small fw-bold"></i>Travel</a>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <span
-                                                    class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
-                                            </td>
-                                            <!-- Table data -->
-                                            <td>
-                                                <div class="d-flex gap-2">
-                                                    <a href="#" class="btn btn-light btn-round mb-0"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Delete"><i class="bi bi-trash"></i></a>
-                                                    <a href="dashboard-post-edit.html"
-                                                        class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Edit"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <!-- Table item -->
+                                            <tr>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="course-title mt-2 mt-md-0 mb-0"><a
+                                                            href="#">Around
+                                                            the web: 20 fabulous infographics about business</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <h6 class="mb-0"><a href="#">Bryan Knight</a></h6>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>Feb 14, 2022</td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <a href="#" class="badge text-bg-danger mb-2"><i
+                                                            class="fas fa-circle me-2 small fw-bold"></i>Travel</a>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <span
+                                                        class="badge bg-success bg-opacity-10 text-success mb-2">Live</span>
+                                                </td>
+                                                <!-- Table data -->
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="bi bi-trash"></i></a>
+                                                        <a href="dashboard-post-edit.html"
+                                                            class="btn btn-light btn-round mb-0"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         @endif
 
                                     </tbody>
@@ -753,9 +792,11 @@
                             <div class="d-sm-flex justify-content-between align-items-center">
                                 <h5 class="mb-2 mb-sm-0">
                                     กำหนดนัดผู้ป่วย
-                                    <span class="badge bg-primary bg-opacity-10 text-primary">{{ Auth::user()->name }}</span>
+                                    <span
+                                        class="badge bg-primary bg-opacity-10 text-primary">{{ Auth::user()->name }}</span>
                                 </h5>
-                                <a href="#" class="btn btn-sm btn-primary mb-0">เพิ่มนัด</a>
+                                <a href="{{ route("appoint.create") }}" class="btn btn-sm btn-primary mb-0">เพิ่มนัด</a>
+                                
                             </div>
                         </div>
                         <!-- Card header END -->
@@ -763,6 +804,7 @@
                         <!-- Card body START -->
                         <div class="card-body">
                             <div id='calendar'></div>
+                            
                             <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
                             <script>
                                 document.addEventListener('DOMContentLoaded', function() {
@@ -770,9 +812,15 @@
                                     var calendar = new FullCalendar.Calendar(calendarEl, {
                                         initialView: 'dayGridMonth',
                                         events: [
-                                            { title: 'นัดครั้งที่ 1', start: '2024-05-01' },
-                                            { title: 'นัดครั้งที่ 2', start: '2024-05-05', end: '2010-01-07' },
-                                            { title: 'นัดครั้งที่ 3', start: '2024-05-09T12:30:00', allDay: false }
+                                            //{ title: 'นัดครั้งที่ 1', start: '2024-05-01' },
+                                            //{ title: 'นัดครั้งที่ 2', start: '2024-05-05', end: '2010-01-07' },
+                                            //{ title: 'นัดครั้งที่ 3', start: '2024-05-09T12:30:00', allDay: false }
+                                            @foreach($appointments as $item)
+                                            {
+                                                title: '{{ "นัด" }} {{ $item->patient->user->name }}',
+                                                start: '{{ $item->appointment_date }}'
+                                            },
+                                            @endforeach                                           
                                         ]
                                     });
                                     calendar.render();
