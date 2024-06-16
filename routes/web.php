@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\BloodSugarLevelController;
 use App\Models\Appointment;
 use App\Models\Patient;
 use App\Models\User;
@@ -66,6 +67,7 @@ Route::middleware('auth')->group(function () {
     })->name('profile.update');
 
     Route::resource('appoint', AppointmentController::class );
+    Route::resource('blood-sugar-level', BloodSugarLevelController::class );
 
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
